@@ -17,6 +17,7 @@
 		5995C41D24D66E8800B5FCB5 /* LoginVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5995C41C24D66E8800B5FCB5 /* LoginVC.swift */; };
 		5995C42124D6733700B5FCB5 /* RoundedButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5995C42024D6733700B5FCB5 /* RoundedButton.swift */; };
 		5995C42324D67A1100B5FCB5 /* RegisterVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5995C42224D67A1100B5FCB5 /* RegisterVC.swift */; };
+		5995C43224D6991100B5FCB5 /* GradientView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5995C43124D6991100B5FCB5 /* GradientView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -32,6 +33,7 @@
 		5995C41C24D66E8800B5FCB5 /* LoginVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginVC.swift; sourceTree = "<group>"; };
 		5995C42024D6733700B5FCB5 /* RoundedButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoundedButton.swift; sourceTree = "<group>"; };
 		5995C42224D67A1100B5FCB5 /* RegisterVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterVC.swift; sourceTree = "<group>"; };
+		5995C43124D6991100B5FCB5 /* GradientView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GradientView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -126,6 +128,7 @@
 			isa = PBXGroup;
 			children = (
 				5995C42024D6733700B5FCB5 /* RoundedButton.swift */,
+				5995C43124D6991100B5FCB5 /* GradientView.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -299,6 +302,7 @@
 				5995C42124D6733700B5FCB5 /* RoundedButton.swift in Sources */,
 				5959C0CA24D07F34003963F3 /* insight_ios.xcdatamodeld in Sources */,
 				5995C42324D67A1100B5FCB5 /* RegisterVC.swift in Sources */,
+				5995C43224D6991100B5FCB5 /* GradientView.swift in Sources */,
 				5959C0C024D07F33003963F3 /* AppDelegate.swift in Sources */,
 				5959C0C224D07F33003963F3 /* SceneDelegate.swift in Sources */,
 			);

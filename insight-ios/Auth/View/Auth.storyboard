@@ -295,8 +295,8 @@
                                     </view>
                                 </subviews>
                             </stackView>
-                            <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Bf5-E4-WnH" customClass="RoundedButton" customModule="insight_ios" customModuleProvider="target">
-                                <rect key="frame" x="40" y="472" width="334" height="50"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Bf5-E4-WnH" customClass="RoundedButton" customModule="insight_ios" customModuleProvider="target">
+                                <rect key="frame" x="40" y="484" width="334" height="50"/>
                                 <color key="backgroundColor" name="light-green"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="50" id="IvH-Wd-lZZ"/>
@@ -319,6 +319,7 @@
                             <constraint firstItem="ZmR-a5-Tnh" firstAttribute="trailing" secondItem="Bf5-E4-WnH" secondAttribute="trailing" constant="40" id="WtO-Wl-iE1"/>
                             <constraint firstItem="OCP-aT-uo2" firstAttribute="top" secondItem="ZmR-a5-Tnh" secondAttribute="top" constant="32" id="aD8-qq-xRM"/>
                             <constraint firstItem="Bf5-E4-WnH" firstAttribute="centerX" secondItem="Ka7-fu-kPg" secondAttribute="centerX" id="dDh-aI-tMC"/>
+                            <constraint firstItem="Bf5-E4-WnH" firstAttribute="top" secondItem="OCP-aT-uo2" secondAttribute="bottom" constant="32" id="sfH-Pq-Jer"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="ZmR-a5-Tnh"/>
                     </view>
@@ -352,10 +353,10 @@
         <image name="Shape" width="13" height="14"/>
         <image name="lock-ico" width="11" height="14"/>
         <namedColor name="grey">
-            <color red="0.60784313725490191" green="0.59999999999999998" blue="0.66274509803921566" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <color red="0.60799998044967651" green="0.60000002384185791" blue="0.66299998760223389" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
         <namedColor name="light-green">
-            <color red="0.0" green="0.81176470588235294" blue="0.60784313725490191" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <color red="0.0" green="0.81199997663497925" blue="0.60799998044967651" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
     </resources>
 </document>
