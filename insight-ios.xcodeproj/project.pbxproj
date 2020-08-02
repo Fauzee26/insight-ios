@@ -9,23 +9,29 @@
 /* Begin PBXBuildFile section */
 		5959C0C024D07F33003963F3 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5959C0BF24D07F33003963F3 /* AppDelegate.swift */; };
 		5959C0C224D07F33003963F3 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5959C0C124D07F33003963F3 /* SceneDelegate.swift */; };
-		5959C0C424D07F33003963F3 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5959C0C324D07F33003963F3 /* ViewController.swift */; };
 		5959C0C724D07F34003963F3 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5959C0C524D07F34003963F3 /* Main.storyboard */; };
 		5959C0CA24D07F34003963F3 /* insight_ios.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 5959C0C824D07F34003963F3 /* insight_ios.xcdatamodeld */; };
 		5959C0CC24D07F37003963F3 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5959C0CB24D07F37003963F3 /* Assets.xcassets */; };
 		5959C0CF24D07F37003963F3 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5959C0CD24D07F37003963F3 /* LaunchScreen.storyboard */; };
+		5995C41B24D66E7600B5FCB5 /* Auth.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5995C41A24D66E7600B5FCB5 /* Auth.storyboard */; };
+		5995C41D24D66E8800B5FCB5 /* LoginVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5995C41C24D66E8800B5FCB5 /* LoginVC.swift */; };
+		5995C42124D6733700B5FCB5 /* RoundedButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5995C42024D6733700B5FCB5 /* RoundedButton.swift */; };
+		5995C42324D67A1100B5FCB5 /* RegisterVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5995C42224D67A1100B5FCB5 /* RegisterVC.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		5959C0BC24D07F33003963F3 /* insight-ios.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "insight-ios.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		5959C0BF24D07F33003963F3 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		5959C0C124D07F33003963F3 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		5959C0C324D07F33003963F3 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		5959C0C624D07F34003963F3 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		5959C0C924D07F34003963F3 /* insight_ios.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = insight_ios.xcdatamodel; sourceTree = "<group>"; };
 		5959C0CB24D07F37003963F3 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		5959C0CE24D07F37003963F3 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		5959C0D024D07F37003963F3 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		5995C41A24D66E7600B5FCB5 /* Auth.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Auth.storyboard; sourceTree = "<group>"; };
+		5995C41C24D66E8800B5FCB5 /* LoginVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginVC.swift; sourceTree = "<group>"; };
+		5995C42024D6733700B5FCB5 /* RoundedButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoundedButton.swift; sourceTree = "<group>"; };
+		5995C42224D67A1100B5FCB5 /* RegisterVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterVC.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -60,7 +66,11 @@
 			children = (
 				5959C0BF24D07F33003963F3 /* AppDelegate.swift */,
 				5959C0C124D07F33003963F3 /* SceneDelegate.swift */,
-				5959C0C324D07F33003963F3 /* ViewController.swift */,
+				5995C41E24D66F3B00B5FCB5 /* Helper */,
+				5995C41624D66DF500B5FCB5 /* Auth */,
+				5995C42524D67B6100B5FCB5 /* Research */,
+				5995C42924D67BA500B5FCB5 /* Guide */,
+				5995C42D24D67BC700B5FCB5 /* Profile */,
 				5959C0C524D07F34003963F3 /* Main.storyboard */,
 				5959C0CB24D07F37003963F3 /* Assets.xcassets */,
 				5959C0CD24D07F37003963F3 /* LaunchScreen.storyboard */,
@@ -68,6 +78,149 @@
 				5959C0C824D07F34003963F3 /* insight_ios.xcdatamodeld */,
 			);
 			path = "insight-ios";
+			sourceTree = "<group>";
+		};
+		5995C41624D66DF500B5FCB5 /* Auth */ = {
+			isa = PBXGroup;
+			children = (
+				5995C41724D66E0200B5FCB5 /* Model */,
+				5995C41824D66E0C00B5FCB5 /* View */,
+				5995C41924D66E1200B5FCB5 /* Presenter */,
+			);
+			path = Auth;
+			sourceTree = "<group>";
+		};
+		5995C41724D66E0200B5FCB5 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		5995C41824D66E0C00B5FCB5 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				5995C41A24D66E7600B5FCB5 /* Auth.storyboard */,
+				5995C41C24D66E8800B5FCB5 /* LoginVC.swift */,
+				5995C42224D67A1100B5FCB5 /* RegisterVC.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		5995C41924D66E1200B5FCB5 /* Presenter */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Presenter;
+			sourceTree = "<group>";
+		};
+		5995C41E24D66F3B00B5FCB5 /* Helper */ = {
+			isa = PBXGroup;
+			children = (
+				5995C41F24D66F4100B5FCB5 /* View */,
+			);
+			path = Helper;
+			sourceTree = "<group>";
+		};
+		5995C41F24D66F4100B5FCB5 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				5995C42024D6733700B5FCB5 /* RoundedButton.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		5995C42524D67B6100B5FCB5 /* Research */ = {
+			isa = PBXGroup;
+			children = (
+				5995C42624D67B6800B5FCB5 /* Model */,
+				5995C42724D67B6D00B5FCB5 /* View */,
+				5995C42824D67B7100B5FCB5 /* Presenter */,
+			);
+			path = Research;
+			sourceTree = "<group>";
+		};
+		5995C42624D67B6800B5FCB5 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		5995C42724D67B6D00B5FCB5 /* View */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		5995C42824D67B7100B5FCB5 /* Presenter */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Presenter;
+			sourceTree = "<group>";
+		};
+		5995C42924D67BA500B5FCB5 /* Guide */ = {
+			isa = PBXGroup;
+			children = (
+				5995C42C24D67BBB00B5FCB5 /* Model */,
+				5995C42B24D67BB700B5FCB5 /* View */,
+				5995C42A24D67BB100B5FCB5 /* Presenter */,
+			);
+			path = Guide;
+			sourceTree = "<group>";
+		};
+		5995C42A24D67BB100B5FCB5 /* Presenter */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Presenter;
+			sourceTree = "<group>";
+		};
+		5995C42B24D67BB700B5FCB5 /* View */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		5995C42C24D67BBB00B5FCB5 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		5995C42D24D67BC700B5FCB5 /* Profile */ = {
+			isa = PBXGroup;
+			children = (
+				5995C43024D67BDB00B5FCB5 /* Model */,
+				5995C42F24D67BD800B5FCB5 /* View */,
+				5995C42E24D67BD200B5FCB5 /* Presenter */,
+			);
+			path = Profile;
+			sourceTree = "<group>";
+		};
+		5995C42E24D67BD200B5FCB5 /* Presenter */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Presenter;
+			sourceTree = "<group>";
+		};
+		5995C42F24D67BD800B5FCB5 /* View */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		5995C43024D67BDB00B5FCB5 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -128,6 +281,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5995C41B24D66E7600B5FCB5 /* Auth.storyboard in Resources */,
 				5959C0CF24D07F37003963F3 /* LaunchScreen.storyboard in Resources */,
 				5959C0CC24D07F37003963F3 /* Assets.xcassets in Resources */,
 				5959C0C724D07F34003963F3 /* Main.storyboard in Resources */,
@@ -141,8 +295,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5995C41D24D66E8800B5FCB5 /* LoginVC.swift in Sources */,
+				5995C42124D6733700B5FCB5 /* RoundedButton.swift in Sources */,
 				5959C0CA24D07F34003963F3 /* insight_ios.xcdatamodeld in Sources */,
-				5959C0C424D07F33003963F3 /* ViewController.swift in Sources */,
+				5995C42324D67A1100B5FCB5 /* RegisterVC.swift in Sources */,
 				5959C0C024D07F33003963F3 /* AppDelegate.swift in Sources */,
 				5959C0C224D07F33003963F3 /* SceneDelegate.swift in Sources */,
 			);
