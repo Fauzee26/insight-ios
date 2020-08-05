@@ -22,7 +22,16 @@
 		5995C43724D6D8C800B5FCB5 /* ProjectCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5995C43524D6D8C800B5FCB5 /* ProjectCell.swift */; };
 		5995C43824D6D8C800B5FCB5 /* ProjectCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5995C43624D6D8C800B5FCB5 /* ProjectCell.xib */; };
 		5995C43B24D7BFEB00B5FCB5 /* AddProjectVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5995C43A24D7BFEB00B5FCB5 /* AddProjectVC.swift */; };
-		5995C43F24D7C15600B5FCB5 /* ListProjectVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5995C43E24D7C15600B5FCB5 /* ListProjectVC.swift */; };
+		5995C43F24D7C15600B5FCB5 /* TabResearchVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5995C43E24D7C15600B5FCB5 /* TabResearchVC.swift */; };
+		5995C44324DA724B00B5FCB5 /* CloudKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5995C44224DA724B00B5FCB5 /* CloudKit.framework */; };
+		5995C46C24DA8E7600B5FCB5 /* Profile.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5995C46B24DA8E7600B5FCB5 /* Profile.storyboard */; };
+		5995C46E24DA8E8300B5FCB5 /* EditProfileVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5995C46D24DA8E8300B5FCB5 /* EditProfileVC.swift */; };
+		5995C47024DA928B00B5FCB5 /* TabGuideVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5995C46F24DA928B00B5FCB5 /* TabGuideVC.swift */; };
+		5995C47224DA929500B5FCB5 /* TabProfileVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5995C47124DA929500B5FCB5 /* TabProfileVC.swift */; };
+		5995C47424DA949900B5FCB5 /* Protocols.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5995C47324DA949900B5FCB5 /* Protocols.swift */; };
+		5995C47624DA98B700B5FCB5 /* RoundedViewOnlyTop.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5995C47524DA98B700B5FCB5 /* RoundedViewOnlyTop.swift */; };
+		5995C47824DA9C0100B5FCB5 /* BorderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5995C47724DA9C0100B5FCB5 /* BorderView.swift */; };
+		5995C47A24DA9D8D00B5FCB5 /* GradientButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5995C47924DA9D8D00B5FCB5 /* GradientButton.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -43,7 +52,17 @@
 		5995C43524D6D8C800B5FCB5 /* ProjectCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProjectCell.swift; sourceTree = "<group>"; };
 		5995C43624D6D8C800B5FCB5 /* ProjectCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ProjectCell.xib; sourceTree = "<group>"; };
 		5995C43A24D7BFEB00B5FCB5 /* AddProjectVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddProjectVC.swift; sourceTree = "<group>"; };
-		5995C43E24D7C15600B5FCB5 /* ListProjectVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListProjectVC.swift; sourceTree = "<group>"; };
+		5995C43E24D7C15600B5FCB5 /* TabResearchVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabResearchVC.swift; sourceTree = "<group>"; };
+		5995C44024DA724300B5FCB5 /* insight-ios.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = "insight-ios.entitlements"; sourceTree = "<group>"; };
+		5995C44224DA724B00B5FCB5 /* CloudKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CloudKit.framework; path = System/Library/Frameworks/CloudKit.framework; sourceTree = SDKROOT; };
+		5995C46B24DA8E7600B5FCB5 /* Profile.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Profile.storyboard; sourceTree = "<group>"; };
+		5995C46D24DA8E8300B5FCB5 /* EditProfileVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditProfileVC.swift; sourceTree = "<group>"; };
+		5995C46F24DA928B00B5FCB5 /* TabGuideVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabGuideVC.swift; sourceTree = "<group>"; };
+		5995C47124DA929500B5FCB5 /* TabProfileVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabProfileVC.swift; sourceTree = "<group>"; };
+		5995C47324DA949900B5FCB5 /* Protocols.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Protocols.swift; sourceTree = "<group>"; };
+		5995C47524DA98B700B5FCB5 /* RoundedViewOnlyTop.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoundedViewOnlyTop.swift; sourceTree = "<group>"; };
+		5995C47724DA9C0100B5FCB5 /* BorderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BorderView.swift; sourceTree = "<group>"; };
+		5995C47924DA9D8D00B5FCB5 /* GradientButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GradientButton.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -51,6 +70,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5995C44324DA724B00B5FCB5 /* CloudKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -62,6 +82,7 @@
 			children = (
 				5959C0BE24D07F33003963F3 /* insight-ios */,
 				5959C0BD24D07F33003963F3 /* Products */,
+				5995C44124DA724B00B5FCB5 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -76,6 +97,7 @@
 		5959C0BE24D07F33003963F3 /* insight-ios */ = {
 			isa = PBXGroup;
 			children = (
+				5995C44024DA724300B5FCB5 /* insight-ios.entitlements */,
 				5959C0BF24D07F33003963F3 /* AppDelegate.swift */,
 				5959C0C124D07F33003963F3 /* SceneDelegate.swift */,
 				5995C41E24D66F3B00B5FCB5 /* Helper */,
@@ -130,6 +152,7 @@
 			isa = PBXGroup;
 			children = (
 				5995C41F24D66F4100B5FCB5 /* View */,
+				5995C47324DA949900B5FCB5 /* Protocols.swift */,
 			);
 			path = Helper;
 			sourceTree = "<group>";
@@ -139,6 +162,9 @@
 			children = (
 				5995C42024D6733700B5FCB5 /* RoundedButton.swift */,
 				5995C43124D6991100B5FCB5 /* GradientView.swift */,
+				5995C47524DA98B700B5FCB5 /* RoundedViewOnlyTop.swift */,
+				5995C47724DA9C0100B5FCB5 /* BorderView.swift */,
+				5995C47924DA9D8D00B5FCB5 /* GradientButton.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -228,6 +254,8 @@
 		5995C42F24D67BD800B5FCB5 /* View */ = {
 			isa = PBXGroup;
 			children = (
+				5995C46B24DA8E7600B5FCB5 /* Profile.storyboard */,
+				5995C46D24DA8E8300B5FCB5 /* EditProfileVC.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -252,9 +280,19 @@
 			isa = PBXGroup;
 			children = (
 				5959C0C524D07F34003963F3 /* Main.storyboard */,
-				5995C43E24D7C15600B5FCB5 /* ListProjectVC.swift */,
+				5995C43E24D7C15600B5FCB5 /* TabResearchVC.swift */,
+				5995C46F24DA928B00B5FCB5 /* TabGuideVC.swift */,
+				5995C47124DA929500B5FCB5 /* TabProfileVC.swift */,
 			);
 			path = Main;
+			sourceTree = "<group>";
+		};
+		5995C44124DA724B00B5FCB5 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				5995C44224DA724B00B5FCB5 /* CloudKit.framework */,
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -320,6 +358,7 @@
 				5995C43424D6D87A00B5FCB5 /* Research.storyboard in Resources */,
 				5959C0CC24D07F37003963F3 /* Assets.xcassets in Resources */,
 				5959C0C724D07F34003963F3 /* Main.storyboard in Resources */,
+				5995C46C24DA8E7600B5FCB5 /* Profile.storyboard in Resources */,
 				5995C43824D6D8C800B5FCB5 /* ProjectCell.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -335,12 +374,19 @@
 				5995C42124D6733700B5FCB5 /* RoundedButton.swift in Sources */,
 				5959C0CA24D07F34003963F3 /* insight_ios.xcdatamodeld in Sources */,
 				5995C43724D6D8C800B5FCB5 /* ProjectCell.swift in Sources */,
+				5995C47824DA9C0100B5FCB5 /* BorderView.swift in Sources */,
 				5995C42324D67A1100B5FCB5 /* RegisterVC.swift in Sources */,
 				5995C43B24D7BFEB00B5FCB5 /* AddProjectVC.swift in Sources */,
 				5995C43224D6991100B5FCB5 /* GradientView.swift in Sources */,
 				5959C0C024D07F33003963F3 /* AppDelegate.swift in Sources */,
-				5995C43F24D7C15600B5FCB5 /* ListProjectVC.swift in Sources */,
+				5995C43F24D7C15600B5FCB5 /* TabResearchVC.swift in Sources */,
+				5995C47424DA949900B5FCB5 /* Protocols.swift in Sources */,
+				5995C47024DA928B00B5FCB5 /* TabGuideVC.swift in Sources */,
 				5959C0C224D07F33003963F3 /* SceneDelegate.swift in Sources */,
+				5995C47624DA98B700B5FCB5 /* RoundedViewOnlyTop.swift in Sources */,
+				5995C47224DA929500B5FCB5 /* TabProfileVC.swift in Sources */,
+				5995C47A24DA9D8D00B5FCB5 /* GradientButton.swift in Sources */,
+				5995C46E24DA8E8300B5FCB5 /* EditProfileVC.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -484,6 +530,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = "insight-ios/insight-ios.entitlements";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 72C5A4RQ56;
 				INFOPLIST_FILE = "insight-ios/Info.plist";
@@ -502,6 +549,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = "insight-ios/insight-ios.entitlements";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 72C5A4RQ56;
 				INFOPLIST_FILE = "insight-ios/Info.plist";

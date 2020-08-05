@@ -104,7 +104,7 @@
         <!--Profile-->
         <scene sceneID="sqr-6V-rVr">
             <objects>
-                <viewController id="On3-vh-nhd" sceneMemberID="viewController">
+                <viewController id="On3-vh-nhd" customClass="TabProfileVC" customModule="insight_ios" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="1Wj-tk-oaw">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -235,16 +235,32 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="gMB-ym-BIM"/>
                     </view>
-                    <navigationItem key="navigationItem" title="Profile" id="YbZ-5R-mTV"/>
+                    <navigationItem key="navigationItem" title="Profile" id="YbZ-5R-mTV">
+                        <barButtonItem key="backBarButtonItem" title="My Profile" id="TEy-OQ-YcR"/>
+                    </navigationItem>
+                    <connections>
+                        <outlet property="viewProfile" destination="dyo-Mp-bKq" id="Gcm-91-1OU"/>
+                        <segue destination="qAn-qy-voF" kind="show" identifier="toEditProfile" id="Spp-bP-zxy"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="kgT-Yw-zqp" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="2187" y="1106"/>
         </scene>
+        <!--Profile-->
+        <scene sceneID="0HG-pe-def">
+            <objects>
+                <viewControllerPlaceholder storyboardName="Profile" id="qAn-qy-voF" sceneMemberID="viewController">
+                    <navigationItem key="navigationItem" id="JWO-qx-B5O"/>
+                </viewControllerPlaceholder>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="69a-bB-3z1" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2805" y="951"/>
+        </scene>
         <!--Projects-->
         <scene sceneID="z4d-ct-gP0">
             <objects>
-                <viewController storyboardIdentifier="ListProjectVC" id="cc2-ld-vHV" customClass="ListProjectVC" customModule="insight_ios" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="ListProjectVC" id="cc2-ld-vHV" customClass="TabResearchVC" customModule="insight_ios" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="fRK-lE-VMn">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -357,6 +373,7 @@
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" largeTitles="YES" id="iRW-6L-VUM">
                         <rect key="frame" x="0.0" y="44" width="414" height="96"/>
                         <autoresizingMask key="autoresizingMask"/>
+                        <color key="tintColor" systemColor="labelColor" cocoaTouchSystemColor="darkTextColor"/>
                     </navigationBar>
                     <nil name="viewControllers"/>
                     <connections>
