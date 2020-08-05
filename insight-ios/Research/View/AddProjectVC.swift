@@ -1,14 +1,14 @@
 //
-//  LoginVC.swift
+//  AddProjectVC.swift
 //  insight-ios
 //
-//  Created by Muhammad Hilmy Fauzi on 02/08/20.
+//  Created by Muhammad Hilmy Fauzi on 03/08/20.
 //  Copyright © 2020 Muhammad Hilmy Fauzi. All rights reserved.
 //
 
 import UIKit
 
-class LoginVC: UIViewController {
+class AddProjectVC: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -16,12 +16,7 @@ class LoginVC: UIViewController {
         // Do any additional setup after loading the view.
     }
     
-    @IBAction func loginLaterPressed(_ sender: UIButton) {
-        let storyboard : UIStoryboard = UIStoryboard(name: "Main", bundle: nil)
-        let listProjectVC = storyboard.instantiateViewController(withIdentifier: "ListProjectVC") as! ListProjectVC
-        present(listProjectVC, animated: true, completion: nil)
-    }
-    
+
     /*
     // MARK: - Navigation
 

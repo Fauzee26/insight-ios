@@ -244,7 +244,7 @@
         <!--Projects-->
         <scene sceneID="z4d-ct-gP0">
             <objects>
-                <viewController id="cc2-ld-vHV" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="ListProjectVC" id="cc2-ld-vHV" customClass="ListProjectVC" customModule="insight_ios" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="fRK-lE-VMn">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -265,7 +265,12 @@
                     </view>
                     <navigationItem key="navigationItem" title="Projects" id="LMi-9e-dri">
                         <rightBarButtonItems>
-                            <barButtonItem title="Item" image="plus" catalog="system" id="Lcl-sq-0pm"/>
+                            <barButtonItem title="Item" image="plus" catalog="system" id="Lcl-sq-0pm">
+                                <connections>
+                                    <action selector="addNewProjectPressed:" destination="cc2-ld-vHV" id="8Im-fl-CIP"/>
+                                    <segue destination="YDe-08-WVw" kind="show" id="JW7-e7-A9P"/>
+                                </connections>
+                            </barButtonItem>
                             <barButtonItem image="line.horizontal.3.decrease" catalog="system" id="KKl-iu-ape"/>
                         </rightBarButtonItems>
                     </navigationItem>
@@ -273,6 +278,16 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="J2l-G3-HUU" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="2187" y="-297"/>
+        </scene>
+        <!--Research-->
+        <scene sceneID="aEN-hh-q7N">
+            <objects>
+                <viewControllerPlaceholder storyboardName="Research" id="YDe-08-WVw" sceneMemberID="viewController">
+                    <navigationItem key="navigationItem" id="mdp-gi-sqf"/>
+                </viewControllerPlaceholder>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="X6Y-fl-rVA" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2750" y="-434"/>
         </scene>
         <!--Tab Bar Controller-->
         <scene sceneID="Cre-qj-nde">

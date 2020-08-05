@@ -11,7 +11,7 @@
         <!--Login-->
         <scene sceneID="HHn-Nc-XkQ">
             <objects>
-                <viewController id="koy-Qm-WLW" sceneMemberID="viewController">
+                <viewController id="koy-Qm-WLW" customClass="LoginVC" customModule="insight_ios" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="twt-bz-8yd">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -114,6 +114,9 @@
                                 <state key="normal" title="Sign In Later">
                                     <color key="titleColor" name="grey"/>
                                 </state>
+                                <connections>
+                                    <action selector="loginLaterPressed:" destination="koy-Qm-WLW" eventType="touchUpInside" id="tHi-h3-q4r"/>
+                                </connections>
                             </button>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="pYm-ZK-5Ix">
                                 <rect key="frame" x="145.5" y="493" width="123" height="57"/>
@@ -165,7 +168,7 @@
         <!--Register-->
         <scene sceneID="mLk-PI-01w">
             <objects>
-                <viewController id="1XV-eE-Zif" sceneMemberID="viewController">
+                <viewController id="1XV-eE-Zif" customClass="RegisterVC" customModule="insight_ios" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="Ka7-fu-kPg">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>

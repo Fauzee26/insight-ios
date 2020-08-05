@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="16097.2" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="HoM-9C-b72">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16087"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Create New Project-->
+        <scene sceneID="9J2-Zc-czq">
+            <objects>
+                <viewController storyboardIdentifier="AddProjectVC" modalTransitionStyle="flipHorizontal" modalPresentationStyle="fullScreen" id="HoM-9C-b72" customClass="AddProjectVC" customModule="insight_ios" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="cOT-At-B05" customClass="GradientView" customModule="insight_ios" customModuleProvider="target">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <viewLayoutGuide key="safeArea" id="vjI-wm-mlx"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="Create New Project" id="9QE-y3-C7h"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="1MB-Pn-cIj" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="847.82608695652175" y="75.669642857142847"/>
+        </scene>
+    </scenes>
+</document>
