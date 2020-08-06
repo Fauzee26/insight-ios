@@ -128,12 +128,20 @@
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
                             </view>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="dsw-GL-phv">
+                                <rect key="frame" x="0.0" y="862" width="414" height="34"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                            </view>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <constraints>
+                            <constraint firstItem="dsw-GL-phv" firstAttribute="top" secondItem="KFS-ag-FwG" secondAttribute="bottom" id="3g0-Zh-WuV"/>
+                            <constraint firstItem="dsw-GL-phv" firstAttribute="leading" secondItem="Z3X-OY-4Hu" secondAttribute="leading" id="7CJ-hU-fFz"/>
                             <constraint firstItem="KFS-ag-FwG" firstAttribute="leading" secondItem="JQs-7K-UYN" secondAttribute="leading" id="IHW-x3-GNh"/>
+                            <constraint firstAttribute="trailing" secondItem="dsw-GL-phv" secondAttribute="trailing" id="LUW-fC-7Vy"/>
                             <constraint firstItem="JQs-7K-UYN" firstAttribute="trailing" secondItem="KFS-ag-FwG" secondAttribute="trailing" id="SDI-Jj-HR0"/>
                             <constraint firstItem="KFS-ag-FwG" firstAttribute="bottom" secondItem="JQs-7K-UYN" secondAttribute="bottom" id="aht-BZ-1iV"/>
+                            <constraint firstAttribute="bottom" secondItem="dsw-GL-phv" secondAttribute="bottom" id="w7h-Xq-LPA"/>
                             <constraint firstItem="KFS-ag-FwG" firstAttribute="top" secondItem="JQs-7K-UYN" secondAttribute="top" constant="-35" id="zkX-W1-1fK"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="JQs-7K-UYN"/>

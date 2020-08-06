@@ -32,9 +32,13 @@
 		5995C47624DA98B700B5FCB5 /* RoundedViewOnlyTop.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5995C47524DA98B700B5FCB5 /* RoundedViewOnlyTop.swift */; };
 		5995C47824DA9C0100B5FCB5 /* BorderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5995C47724DA9C0100B5FCB5 /* BorderView.swift */; };
 		5995C47A24DA9D8D00B5FCB5 /* GradientButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5995C47924DA9D8D00B5FCB5 /* GradientButton.swift */; };
+		5995C47E24DB9E4200B5FCB5 /* HotTopicCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5995C47C24DB9E4200B5FCB5 /* HotTopicCell.swift */; };
+		5995C47F24DB9E4200B5FCB5 /* HotTopicCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5995C47D24DB9E4200B5FCB5 /* HotTopicCell.xib */; };
+		A4DD6CA924883837358E701F /* Pods_insight_ios.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A7E24BB68B21BCEFC2E8D1AA /* Pods_insight_ios.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		0A6527C6BA69D2938B1F8FE8 /* Pods-insight-ios.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-insight-ios.release.xcconfig"; path = "Target Support Files/Pods-insight-ios/Pods-insight-ios.release.xcconfig"; sourceTree = "<group>"; };
 		5959C0BC24D07F33003963F3 /* insight-ios.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "insight-ios.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		5959C0BF24D07F33003963F3 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		5959C0C124D07F33003963F3 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -63,6 +67,10 @@
 		5995C47524DA98B700B5FCB5 /* RoundedViewOnlyTop.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoundedViewOnlyTop.swift; sourceTree = "<group>"; };
 		5995C47724DA9C0100B5FCB5 /* BorderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BorderView.swift; sourceTree = "<group>"; };
 		5995C47924DA9D8D00B5FCB5 /* GradientButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GradientButton.swift; sourceTree = "<group>"; };
+		5995C47C24DB9E4200B5FCB5 /* HotTopicCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HotTopicCell.swift; sourceTree = "<group>"; };
+		5995C47D24DB9E4200B5FCB5 /* HotTopicCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HotTopicCell.xib; sourceTree = "<group>"; };
+		A7E24BB68B21BCEFC2E8D1AA /* Pods_insight_ios.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_insight_ios.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		EB06C2D19C5D047B4626E6FA /* Pods-insight-ios.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-insight-ios.debug.xcconfig"; path = "Target Support Files/Pods-insight-ios/Pods-insight-ios.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -71,18 +79,30 @@
 			buildActionMask = 2147483647;
 			files = (
 				5995C44324DA724B00B5FCB5 /* CloudKit.framework in Frameworks */,
+				A4DD6CA924883837358E701F /* Pods_insight_ios.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		392B8A3D975AE1BF53752C0F /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				EB06C2D19C5D047B4626E6FA /* Pods-insight-ios.debug.xcconfig */,
+				0A6527C6BA69D2938B1F8FE8 /* Pods-insight-ios.release.xcconfig */,
+			);
+			name = Pods;
+			path = Pods;
+			sourceTree = "<group>";
+		};
 		5959C0B324D07F33003963F3 = {
 			isa = PBXGroup;
 			children = (
 				5959C0BE24D07F33003963F3 /* insight-ios */,
 				5959C0BD24D07F33003963F3 /* Products */,
 				5995C44124DA724B00B5FCB5 /* Frameworks */,
+				392B8A3D975AE1BF53752C0F /* Pods */,
 			);
 			sourceTree = "<group>";
 		};
@@ -223,6 +243,7 @@
 		5995C42B24D67BB700B5FCB5 /* View */ = {
 			isa = PBXGroup;
 			children = (
+				5995C47B24DB9AFC00B5FCB5 /* Cell */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -291,8 +312,18 @@
 			isa = PBXGroup;
 			children = (
 				5995C44224DA724B00B5FCB5 /* CloudKit.framework */,
+				A7E24BB68B21BCEFC2E8D1AA /* Pods_insight_ios.framework */,
 			);
 			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		5995C47B24DB9AFC00B5FCB5 /* Cell */ = {
+			isa = PBXGroup;
+			children = (
+				5995C47C24DB9E4200B5FCB5 /* HotTopicCell.swift */,
+				5995C47D24DB9E4200B5FCB5 /* HotTopicCell.xib */,
+			);
+			path = Cell;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -302,9 +333,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 5959C0D324D07F37003963F3 /* Build configuration list for PBXNativeTarget "insight-ios" */;
 			buildPhases = (
+				00473EC1183B3BC2D7FD98A6 /* [CP] Check Pods Manifest.lock */,
 				5959C0B824D07F33003963F3 /* Sources */,
 				5959C0B924D07F33003963F3 /* Frameworks */,
 				5959C0BA24D07F33003963F3 /* Resources */,
+				480FC03EE77E93F5810E593F /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -356,6 +389,7 @@
 				5995C41B24D66E7600B5FCB5 /* Auth.storyboard in Resources */,
 				5959C0CF24D07F37003963F3 /* LaunchScreen.storyboard in Resources */,
 				5995C43424D6D87A00B5FCB5 /* Research.storyboard in Resources */,
+				5995C47F24DB9E4200B5FCB5 /* HotTopicCell.xib in Resources */,
 				5959C0CC24D07F37003963F3 /* Assets.xcassets in Resources */,
 				5959C0C724D07F34003963F3 /* Main.storyboard in Resources */,
 				5995C46C24DA8E7600B5FCB5 /* Profile.storyboard in Resources */,
@@ -364,6 +398,48 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		00473EC1183B3BC2D7FD98A6 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-insight-ios-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		480FC03EE77E93F5810E593F /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-insight-ios/Pods-insight-ios-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-insight-ios/Pods-insight-ios-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-insight-ios/Pods-insight-ios-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		5959C0B824D07F33003963F3 /* Sources */ = {
@@ -377,6 +453,7 @@
 				5995C47824DA9C0100B5FCB5 /* BorderView.swift in Sources */,
 				5995C42324D67A1100B5FCB5 /* RegisterVC.swift in Sources */,
 				5995C43B24D7BFEB00B5FCB5 /* AddProjectVC.swift in Sources */,
+				5995C47E24DB9E4200B5FCB5 /* HotTopicCell.swift in Sources */,
 				5995C43224D6991100B5FCB5 /* GradientView.swift in Sources */,
 				5959C0C024D07F33003963F3 /* AppDelegate.swift in Sources */,
 				5995C43F24D7C15600B5FCB5 /* TabResearchVC.swift in Sources */,
@@ -528,6 +605,7 @@
 		};
 		5959C0D424D07F37003963F3 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = EB06C2D19C5D047B4626E6FA /* Pods-insight-ios.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_ENTITLEMENTS = "insight-ios/insight-ios.entitlements";
@@ -547,6 +625,7 @@
 		};
 		5959C0D524D07F37003963F3 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 0A6527C6BA69D2938B1F8FE8 /* Pods-insight-ios.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_ENTITLEMENTS = "insight-ios/insight-ios.entitlements";
