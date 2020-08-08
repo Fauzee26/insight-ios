@@ -28,8 +28,8 @@
                                         </constraints>
                                     </imageView>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="iH4-Qd-KWC">
-                                        <rect key="frame" x="168.5" y="144" width="77" height="30"/>
-                                        <state key="normal" title="Pick Avatar"/>
+                                        <rect key="frame" x="156.5" y="144" width="101" height="30"/>
+                                        <state key="normal" title="Change Avatar"/>
                                         <connections>
                                             <segue destination="DfC-bk-KTx" kind="presentation" id="DIw-vm-gmv"/>
                                         </connections>
@@ -58,7 +58,7 @@
                                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Email" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="9c1-iD-Tdc">
                                                 <rect key="frame" x="12" y="4" width="350" height="52"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="18"/>
-                                                <textInputTraits key="textInputTraits"/>
+                                                <textInputTraits key="textInputTraits" keyboardType="emailAddress"/>
                                             </textField>
                                         </subviews>
                                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -88,8 +88,9 @@
                                             <constraint firstAttribute="height" constant="60" id="nSD-ei-sOD"/>
                                         </constraints>
                                     </view>
-                                    <button opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zI4-Df-2V8" customClass="GradientButton" customModule="insight_ios" customModuleProvider="target">
+                                    <button opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zI4-Df-2V8">
                                         <rect key="frame" x="20" y="773" width="374" height="60"/>
+                                        <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="60" id="DdF-1Q-D7C"/>
                                         </constraints>

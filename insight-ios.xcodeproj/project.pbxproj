@@ -38,7 +38,6 @@
 		5995C47424DA949900B5FCB5 /* Protocols.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5995C47324DA949900B5FCB5 /* Protocols.swift */; };
 		5995C47624DA98B700B5FCB5 /* RoundedViewOnlyTop.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5995C47524DA98B700B5FCB5 /* RoundedViewOnlyTop.swift */; };
 		5995C47824DA9C0100B5FCB5 /* BorderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5995C47724DA9C0100B5FCB5 /* BorderView.swift */; };
-		5995C47A24DA9D8D00B5FCB5 /* GradientButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5995C47924DA9D8D00B5FCB5 /* GradientButton.swift */; };
 		5995C47E24DB9E4200B5FCB5 /* HotTopicCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5995C47C24DB9E4200B5FCB5 /* HotTopicCell.swift */; };
 		5995C47F24DB9E4200B5FCB5 /* HotTopicCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5995C47D24DB9E4200B5FCB5 /* HotTopicCell.xib */; };
 		5995C48524DC0F7F00B5FCB5 /* Guide.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5995C48424DC0F7F00B5FCB5 /* Guide.storyboard */; };
@@ -85,7 +84,6 @@
 		5995C47324DA949900B5FCB5 /* Protocols.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Protocols.swift; sourceTree = "<group>"; };
 		5995C47524DA98B700B5FCB5 /* RoundedViewOnlyTop.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoundedViewOnlyTop.swift; sourceTree = "<group>"; };
 		5995C47724DA9C0100B5FCB5 /* BorderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BorderView.swift; sourceTree = "<group>"; };
-		5995C47924DA9D8D00B5FCB5 /* GradientButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GradientButton.swift; sourceTree = "<group>"; };
 		5995C47C24DB9E4200B5FCB5 /* HotTopicCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HotTopicCell.swift; sourceTree = "<group>"; };
 		5995C47D24DB9E4200B5FCB5 /* HotTopicCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HotTopicCell.xib; sourceTree = "<group>"; };
 		5995C48424DC0F7F00B5FCB5 /* Guide.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Guide.storyboard; sourceTree = "<group>"; };
@@ -218,7 +216,6 @@
 				5995C43124D6991100B5FCB5 /* GradientView.swift */,
 				5995C47524DA98B700B5FCB5 /* RoundedViewOnlyTop.swift */,
 				5995C47724DA9C0100B5FCB5 /* BorderView.swift */,
-				5995C47924DA9D8D00B5FCB5 /* GradientButton.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -516,7 +513,6 @@
 				5959C0C224D07F33003963F3 /* SceneDelegate.swift in Sources */,
 				5995C47624DA98B700B5FCB5 /* RoundedViewOnlyTop.swift in Sources */,
 				5995C47224DA929500B5FCB5 /* TabProfileVC.swift in Sources */,
-				5995C47A24DA9D8D00B5FCB5 /* GradientButton.swift in Sources */,
 				5930698524DE60BB0064DCFB /* Constans.swift in Sources */,
 				5995C46E24DA8E8300B5FCB5 /* EditProfileVC.swift in Sources */,
 			);

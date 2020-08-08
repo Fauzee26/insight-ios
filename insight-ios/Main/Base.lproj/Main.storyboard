@@ -264,6 +264,9 @@
                         <barButtonItem key="backBarButtonItem" title="My Profile" id="TEy-OQ-YcR"/>
                     </navigationItem>
                     <connections>
+                        <outlet property="imgProfile" destination="ill-mR-WBY" id="FL0-WK-7gb"/>
+                        <outlet property="txtEmailProfile" destination="pQp-uh-aJe" id="vVf-yT-mL4"/>
+                        <outlet property="txtNameProfile" destination="daN-oY-mnO" id="Rsh-Vz-aPI"/>
                         <outlet property="viewProfile" destination="dyo-Mp-bKq" id="Gcm-91-1OU"/>
                         <segue destination="qAn-qy-voF" kind="show" identifier="toEditProfile" id="Spp-bP-zxy"/>
                     </connections>

@@ -24,9 +24,10 @@ class ProfilePresenter {
         return udService.userAvatarName
     }
     
-    func setProfile(_ name: String, _ email: String) {
+    func setProfile(name: String, email: String, bgColor: String) {
         udService.userName = name
         udService.userEmail = email
+        udService.userBgColor = bgColor
     }
     
     func getProfile() -> User {

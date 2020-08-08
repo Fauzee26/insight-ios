@@ -7,5 +7,6 @@ target 'insight-ios' do
 
   # Pods for insight-ios
    pod 'SDWebImage'
+   pod 'DTGradientButton'
 
 end

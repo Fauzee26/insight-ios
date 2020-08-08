@@ -1,18 +1,22 @@
 PODS:
+  - DTGradientButton (0.1.3)
   - SDWebImage (5.8.4):
     - SDWebImage/Core (= 5.8.4)
   - SDWebImage/Core (5.8.4)
 
 DEPENDENCIES:
+  - DTGradientButton
   - SDWebImage
 
 SPEC REPOS:
   trunk:
+    - DTGradientButton
     - SDWebImage
 
 SPEC CHECKSUMS:
+  DTGradientButton: 6f0f696cd433255d226c05e4ab047d991d13d4ef
   SDWebImage: cf6922231e95550934da2ada0f20f2becf2ceba9
 
-PODFILE CHECKSUM: ed6d016d5054f04b084c307cd58501fffa4aa2aa
+PODFILE CHECKSUM: 94182db503f1b0073630563b89c1763df1837027
 
 COCOAPODS: 1.9.1
