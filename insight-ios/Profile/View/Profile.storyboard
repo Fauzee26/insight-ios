@@ -3,7 +3,9 @@
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16087"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="collection view cell content view" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
@@ -26,11 +28,14 @@
                                         </constraints>
                                     </imageView>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="iH4-Qd-KWC">
-                                        <rect key="frame" x="158" y="144" width="98" height="30"/>
-                                        <state key="normal" title="Change Photo"/>
+                                        <rect key="frame" x="168.5" y="144" width="77" height="30"/>
+                                        <state key="normal" title="Pick Avatar"/>
+                                        <connections>
+                                            <segue destination="DfC-bk-KTx" kind="presentation" id="DIw-vm-gmv"/>
+                                        </connections>
                                     </button>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="4yh-cI-idY" customClass="BorderView" customModule="insight_ios" customModuleProvider="target">
-                                        <rect key="frame" x="20" y="204" width="374" height="60"/>
+                                        <rect key="frame" x="20" y="234" width="374" height="60"/>
                                         <subviews>
                                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Full Name" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="tlj-kW-PMe">
                                                 <rect key="frame" x="12" y="4" width="350" height="52"/>
@@ -48,7 +53,7 @@
                                         </constraints>
                                     </view>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="iRT-Ve-4aQ" customClass="BorderView" customModule="insight_ios" customModuleProvider="target">
-                                        <rect key="frame" x="20" y="276" width="374" height="60"/>
+                                        <rect key="frame" x="20" y="306" width="374" height="60"/>
                                         <subviews>
                                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Email" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="9c1-iD-Tdc">
                                                 <rect key="frame" x="12" y="4" width="350" height="52"/>
@@ -66,7 +71,7 @@
                                         </constraints>
                                     </view>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="wUU-eT-kn7" customClass="BorderView" customModule="insight_ios" customModuleProvider="target">
-                                        <rect key="frame" x="20" y="348" width="374" height="60"/>
+                                        <rect key="frame" x="20" y="378" width="374" height="60"/>
                                         <subviews>
                                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Role" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="2sv-qW-UOi">
                                                 <rect key="frame" x="12" y="4" width="350" height="52"/>
@@ -101,6 +106,13 @@
                                             <action selector="btnSavePressed:" destination="WQW-nA-w8H" eventType="touchUpInside" id="rjj-F3-4kX"/>
                                         </connections>
                                     </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="eEO-gp-uaF">
+                                        <rect key="frame" x="111.5" y="174" width="191" height="30"/>
+                                        <state key="normal" title="Generate Background Color"/>
+                                        <connections>
+                                            <action selector="generateBgColorPressed:" destination="WQW-nA-w8H" eventType="touchUpInside" id="4nx-LU-wl3"/>
+                                        </connections>
+                                    </button>
                                 </subviews>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                                 <constraints>
@@ -108,11 +120,12 @@
                                     <constraint firstItem="Iuk-em-WkQ" firstAttribute="centerX" secondItem="KFS-ag-FwG" secondAttribute="centerX" id="38T-2d-6le"/>
                                     <constraint firstAttribute="trailing" secondItem="4yh-cI-idY" secondAttribute="trailing" constant="20" id="4um-4o-mNm"/>
                                     <constraint firstItem="iRT-Ve-4aQ" firstAttribute="top" secondItem="4yh-cI-idY" secondAttribute="bottom" constant="12" id="6h2-OE-i9T"/>
+                                    <constraint firstItem="4yh-cI-idY" firstAttribute="top" secondItem="eEO-gp-uaF" secondAttribute="bottom" constant="30" id="81w-s0-52S"/>
                                     <constraint firstAttribute="trailing" secondItem="zI4-Df-2V8" secondAttribute="trailing" constant="20" id="C2u-Bm-C3G"/>
                                     <constraint firstItem="Iuk-em-WkQ" firstAttribute="top" secondItem="KFS-ag-FwG" secondAttribute="top" constant="20" id="HUH-ck-pU3"/>
                                     <constraint firstItem="4yh-cI-idY" firstAttribute="leading" secondItem="KFS-ag-FwG" secondAttribute="leading" constant="20" id="LKC-bA-Xhw"/>
                                     <constraint firstAttribute="bottom" secondItem="zI4-Df-2V8" secondAttribute="bottom" constant="20" id="MVB-6E-f5X"/>
-                                    <constraint firstItem="4yh-cI-idY" firstAttribute="top" secondItem="iH4-Qd-KWC" secondAttribute="bottom" constant="30" id="OCw-2O-Jh0"/>
+                                    <constraint firstItem="eEO-gp-uaF" firstAttribute="top" secondItem="iH4-Qd-KWC" secondAttribute="bottom" id="Mle-wO-oK9"/>
                                     <constraint firstItem="iH4-Qd-KWC" firstAttribute="centerX" secondItem="KFS-ag-FwG" secondAttribute="centerX" id="Pxj-fu-wXq"/>
                                     <constraint firstItem="zI4-Df-2V8" firstAttribute="centerX" secondItem="KFS-ag-FwG" secondAttribute="centerX" id="W5g-xL-aGq"/>
                                     <constraint firstAttribute="trailing" secondItem="wUU-eT-kn7" secondAttribute="trailing" constant="20" id="Xou-td-rXH"/>
@@ -121,6 +134,7 @@
                                     <constraint firstItem="wUU-eT-kn7" firstAttribute="leading" secondItem="KFS-ag-FwG" secondAttribute="leading" constant="20" id="i6N-ua-fwq"/>
                                     <constraint firstItem="zI4-Df-2V8" firstAttribute="leading" secondItem="KFS-ag-FwG" secondAttribute="leading" constant="20" id="ljJ-wK-klO"/>
                                     <constraint firstAttribute="trailing" secondItem="iRT-Ve-4aQ" secondAttribute="trailing" constant="20" id="nJE-aZ-oRb"/>
+                                    <constraint firstItem="eEO-gp-uaF" firstAttribute="centerX" secondItem="KFS-ag-FwG" secondAttribute="centerX" id="nKa-I5-z4L"/>
                                 </constraints>
                                 <userDefinedRuntimeAttributes>
                                     <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
@@ -148,14 +162,98 @@
                     </view>
                     <connections>
                         <outlet property="btnSave" destination="zI4-Df-2V8" id="3Sh-8s-p1U"/>
+                        <outlet property="emailField" destination="9c1-iD-Tdc" id="wNh-gf-rMP"/>
+                        <outlet property="fullNameField" destination="tlj-kW-PMe" id="NPy-HT-rP8"/>
+                        <outlet property="imgProfile" destination="Iuk-em-WkQ" id="Fqt-kG-bVn"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Bzn-4j-apo" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="169.56521739130437" y="104.46428571428571"/>
         </scene>
+        <!--Avatar PickerVC-->
+        <scene sceneID="gwW-yC-iA2">
+            <objects>
+                <viewController id="DfC-bk-KTx" customClass="AvatarPickerVC" customModule="insight_ios" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="647-D9-x9z">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="IfR-H7-kj9">
+                                <rect key="frame" x="132" y="20" width="150" height="41"/>
+                                <color key="backgroundColor" name="blue-main"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="40" id="K9j-dQ-hCl"/>
+                                    <constraint firstAttribute="width" constant="150" id="ZIx-Qg-OvY"/>
+                                </constraints>
+                                <segments>
+                                    <segment title="Light"/>
+                                    <segment title="Dark"/>
+                                </segments>
+                                <connections>
+                                    <action selector="segmentedControlChanged:" destination="DfC-bk-KTx" eventType="valueChanged" id="wN3-wV-GOW"/>
+                                </connections>
+                            </segmentedControl>
+                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="Xlr-gf-jxx">
+                                <rect key="frame" x="0.0" y="72" width="414" height="736"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="O0g-hj-l9N">
+                                    <size key="itemSize" width="100" height="100"/>
+                                    <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                                    <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                                    <inset key="sectionInset" minX="20" minY="0.0" maxX="20" maxY="0.0"/>
+                                </collectionViewFlowLayout>
+                                <cells>
+                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="avatarCell" id="asb-uT-3vh" customClass="AvatarCell" customModule="insight_ios" customModuleProvider="target">
+                                        <rect key="frame" x="20" y="0.0" width="100" height="100"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <collectionViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="MFB-L6-Sbv">
+                                            <rect key="frame" x="0.0" y="0.0" width="100" height="100"/>
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                            <subviews>
+                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="smH-ow-Gwc">
+                                                    <rect key="frame" x="10" y="10" width="80" height="80"/>
+                                                </imageView>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstAttribute="bottom" secondItem="smH-ow-Gwc" secondAttribute="bottom" constant="10" id="WH5-0d-DQU"/>
+                                                <constraint firstItem="smH-ow-Gwc" firstAttribute="top" secondItem="MFB-L6-Sbv" secondAttribute="top" constant="10" id="bSV-Jz-7pr"/>
+                                                <constraint firstItem="smH-ow-Gwc" firstAttribute="leading" secondItem="MFB-L6-Sbv" secondAttribute="leading" constant="10" id="mfF-fh-Ubz"/>
+                                                <constraint firstAttribute="trailing" secondItem="smH-ow-Gwc" secondAttribute="trailing" constant="10" id="oAX-5b-ESe"/>
+                                            </constraints>
+                                        </collectionViewCellContentView>
+                                        <connections>
+                                            <outlet property="avatarImg" destination="smH-ow-Gwc" id="OLw-8R-O2Q"/>
+                                        </connections>
+                                    </collectionViewCell>
+                                </cells>
+                            </collectionView>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="zcR-SI-DON" firstAttribute="bottom" secondItem="Xlr-gf-jxx" secondAttribute="bottom" id="2Rp-ka-N3J"/>
+                            <constraint firstItem="Xlr-gf-jxx" firstAttribute="top" secondItem="IfR-H7-kj9" secondAttribute="bottom" constant="12" id="4x5-Mw-sBF"/>
+                            <constraint firstItem="Xlr-gf-jxx" firstAttribute="leading" secondItem="zcR-SI-DON" secondAttribute="leading" id="aBV-aY-Y1N"/>
+                            <constraint firstItem="IfR-H7-kj9" firstAttribute="top" secondItem="zcR-SI-DON" secondAttribute="top" constant="20" id="icH-ef-ORB"/>
+                            <constraint firstItem="Xlr-gf-jxx" firstAttribute="trailing" secondItem="zcR-SI-DON" secondAttribute="trailing" id="pvW-sL-PFd"/>
+                            <constraint firstItem="IfR-H7-kj9" firstAttribute="centerX" secondItem="647-D9-x9z" secondAttribute="centerX" id="vcJ-l7-Wln"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="zcR-SI-DON"/>
+                    </view>
+                    <connections>
+                        <outlet property="collectionView" destination="Xlr-gf-jxx" id="kSB-o5-b2e"/>
+                        <outlet property="segmentedControl" destination="IfR-H7-kj9" id="y7g-SY-5z5"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="QDE-Yj-1q8" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="868" y="108"/>
+        </scene>
     </scenes>
     <resources>
         <image name="profileDefault" width="192" height="192"/>
+        <namedColor name="blue-main">
+            <color red="0.16500000655651093" green="0.69800001382827759" blue="0.73299998044967651" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
     </resources>
 </document>

@@ -11,3 +11,4 @@ import UIKit
 protocol ViewClicked {
     func viewGotClicked()
 }
+

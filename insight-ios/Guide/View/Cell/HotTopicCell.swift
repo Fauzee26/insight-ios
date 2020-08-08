@@ -10,9 +10,12 @@ import UIKit
 
 class HotTopicCell: UICollectionViewCell {
 
-    override func awakeFromNib() {
-        super.awakeFromNib()
-        // Initialization code
+    @IBOutlet weak var imageVIew: UIImageView!
+    @IBOutlet weak var label: UILabel!
+    
+    func configureCell(image: UIImage, name: String) {
+        imageVIew.layer.cornerRadius = 15
+        imageVIew.image = image
+        label.text = name
     }
-
 }

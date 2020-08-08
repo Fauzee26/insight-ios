@@ -11,7 +11,7 @@
         <!--Learning Guide-->
         <scene sceneID="Ch9-yr-Cam">
             <objects>
-                <viewController id="3ON-LY-3vN" sceneMemberID="viewController">
+                <viewController id="3ON-LY-3vN" customClass="TabGuideVC" customModule="insight_ios" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="u0C-jB-HyY">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -23,20 +23,20 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="GgS-XS-oUP">
-                                <rect key="frame" x="20" y="330" width="374" height="1"/>
+                                <rect key="frame" x="20" y="378" width="374" height="1"/>
                                 <color key="backgroundColor" systemColor="separatorColor" red="0.23529411759999999" green="0.23529411759999999" blue="0.26274509800000001" alpha="0.28999999999999998" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="1" id="OYU-o8-siZ"/>
                                 </constraints>
                             </view>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Forum Question" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6dM-mA-JZ8">
-                                <rect key="frame" x="20" y="351" width="146" height="26"/>
+                                <rect key="frame" x="20" y="399" width="146" height="26"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="21"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="HgF-hf-awo">
-                                <rect key="frame" x="20" y="389" width="374" height="416"/>
+                                <rect key="frame" x="20" y="437" width="374" height="368"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                             </tableView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Kon-0A-7nC">
@@ -47,21 +47,29 @@
                                 <state key="normal" title="See All">
                                     <color key="titleColor" name="grey"/>
                                 </state>
+                                <connections>
+                                    <action selector="btnSeeAllHotTopicPressed:" destination="HI7-fY-6Bs" eventType="touchUpInside" id="Pbc-iU-NXZ"/>
+                                    <action selector="btnSeeAllHotTopicPressed:" destination="3ON-LY-3vN" eventType="touchUpInside" id="jRK-OI-5eD"/>
+                                    <segue destination="Ts1-H7-gnh" kind="show" id="If6-Lr-LY0"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3Jb-O7-Kyq">
-                                <rect key="frame" x="347" y="357" width="47" height="20"/>
+                                <rect key="frame" x="347" y="405" width="47" height="20"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="20" id="hFC-v6-5Ti"/>
                                 </constraints>
                                 <state key="normal" title="See All">
                                     <color key="titleColor" name="grey"/>
                                 </state>
+                                <connections>
+                                    <action selector="btnSeeAllForumQuestionPressed:" destination="3ON-LY-3vN" eventType="touchUpInside" id="c9s-OL-NeA"/>
+                                </connections>
                             </button>
                             <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="8HN-yG-eLd">
-                                <rect key="frame" x="20" y="186" width="374" height="132"/>
+                                <rect key="frame" x="20" y="186" width="374" height="180"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="132" id="dbv-b7-geq"/>
+                                    <constraint firstAttribute="height" constant="180" id="dbv-b7-geq"/>
                                 </constraints>
                                 <collectionViewFlowLayout key="collectionViewLayout" scrollDirection="horizontal" automaticEstimatedItemSize="YES" minimumLineSpacing="10" minimumInteritemSpacing="10" id="UtG-Ts-o48">
                                     <size key="itemSize" width="128" height="128"/>
@@ -95,11 +103,28 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="iLK-0t-bXT"/>
                     </view>
-                    <navigationItem key="navigationItem" title="Learning Guide" id="ehk-4w-Ep7"/>
+                    <navigationItem key="navigationItem" title="Learning Guide" id="ehk-4w-Ep7">
+                        <barButtonItem key="backBarButtonItem" title="Guide" id="ZKy-q9-zmR"/>
+                    </navigationItem>
+                    <connections>
+                        <outlet property="collectionViewHotTopic" destination="8HN-yG-eLd" id="3uJ-9y-biM"/>
+                        <outlet property="tableViewForum" destination="HgF-hf-awo" id="5aC-pZ-tm2"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="CAh-r3-GWW" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+                <exit id="HI7-fY-6Bs" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
             <point key="canvasLocation" x="2187" y="398"/>
+        </scene>
+        <!--Guide-->
+        <scene sceneID="hRa-e7-YYg">
+            <objects>
+                <viewControllerPlaceholder storyboardName="Guide" id="Ts1-H7-gnh" sceneMemberID="viewController">
+                    <navigationItem key="navigationItem" id="P9g-lO-12Z"/>
+                </viewControllerPlaceholder>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="z9C-ru-Chz" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2742" y="308"/>
         </scene>
         <!--Profile-->
         <scene sceneID="sqr-6V-rVr">
@@ -354,6 +379,7 @@
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" largeTitles="YES" id="ITO-jf-7aW">
                         <rect key="frame" x="0.0" y="44" width="414" height="96"/>
                         <autoresizingMask key="autoresizingMask"/>
+                        <color key="tintColor" systemColor="labelColor" cocoaTouchSystemColor="darkTextColor"/>
                     </navigationBar>
                     <nil name="viewControllers"/>
                     <connections>
