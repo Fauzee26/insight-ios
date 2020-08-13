@@ -14,10 +14,11 @@ class TabProfileVC: UIViewController {
     @IBOutlet weak var imgProfile: UIImageView!
     @IBOutlet weak var txtNameProfile: UILabel!
     @IBOutlet weak var txtEmailProfile: UILabel!
+    @IBOutlet weak var rightBar: UIBarButtonItem!
     
-//    var delegate: ViewClicked!
-    
+    let udService = UserDefaultService.instance
     let presenter = ProfilePresenter()
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         imgProfile.layer.cornerRadius = imgProfile.frame.height/2
@@ -31,6 +32,17 @@ class TabProfileVC: UIViewController {
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         setupProfile()
+        
+        var title = "Logout"
+        var color = UIColor.systemRed
+        
+        if udService.isLoggedIn == false {
+            title = "Sign In"
+            color = UIColor(named: "grey")!
+        }
+        
+        rightBar.title = title
+        rightBar.tintColor = color
     }
     
     @objc func setupProfile() {
@@ -38,12 +50,27 @@ class TabProfileVC: UIViewController {
         imgProfile.image = UIImage(named: user.userAvatar)
         imgProfile.backgroundColor = presenter.returnUIColor(components: user.userBgColor)
         
-        txtNameProfile.text = user.userName == "" ? "-your name here-" : user.userName
-        txtEmailProfile.text = user.userEmail == "" ? "-email@email.com-" : user.userEmail
+        txtNameProfile.text = udService.userName
+        txtEmailProfile.text = udService.userEmail
+
+//        txtNameProfile.text = user.userName == "" ? "-your name here-" : user.userName
+//        txtEmailProfile.text = user.userEmail == "" ? "-email@email.com-" : user.userEmail
     }
     
     @objc func goToEditProfile(_ sender: UITapGestureRecognizer) {
         performSegue(withIdentifier: "toEditProfile", sender: self)
     }
+   
+    @IBAction func logoutPressed(_ sender: UIBarButtonItem) {
+        udService.isLoggedIn = false
+        udService.userName = ""
+        udService.userEmail = ""
+        udService.userId = ""
+        
+        let storyboard = UIStoryboard(name: "Auth", bundle: nil)
+        let navAuth = storyboard.instantiateInitialViewController() as! UINavigationController
+        present(navAuth, animated: true, completion: nil)
+    }
     
 }
+

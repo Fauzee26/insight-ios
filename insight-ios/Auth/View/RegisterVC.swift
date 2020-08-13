@@ -9,22 +9,92 @@
 import UIKit
 
 class RegisterVC: UIViewController {
-
+    
+    @IBOutlet weak var fullNameField: UITextField!
+    @IBOutlet weak var emailField: UITextField!
+    @IBOutlet weak var passwordField: UITextField!
+    @IBOutlet weak var confirmPasswordField: UITextField!
+    @IBOutlet weak var btnRegister: UIButton!
+    
+    var presenter: RegisterPresenter?
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
+        
+        presenter = RegisterPresenter(delegate: self)
+        
+        btnRegister.layer.cornerRadius = btnRegister.frame.height/2
+        
+        let tap = UITapGestureRecognizer(target: self, action: #selector(hideKeyboard(_:)))
+        view.addGestureRecognizer(tap)
     }
     
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
+    @objc func hideKeyboard(_ sender: UITapGestureRecognizer) {
+        view.endEditing(true)
     }
-    */
+    
+    @IBAction func loginHereBtnPressed(_ sender: UIButton) {
+        self.navigationController?.popViewController(animated: true)
+    }
+    
+    @IBAction func registerBtnPressed(_ sender: UIButton) {
+        if fullNameField.text!.isEmpty {
+            alert(message: "fullname cannot be empty")
+            return
+        }
+        
+        if emailField.text!.isEmpty {
+            alert(message: "email address cannot be empty")
+            return
+        }
+        
+        if passwordField.text!.isEmpty {
+            alert(message: "password cannot be empty")
+            return
+        }
+        
+        if confirmPasswordField.text != passwordField.text {
+            alert(message: "your confirmation password doesn't match")
+            return
+        }
+        
+        if let fullname = fullNameField.text, let email = emailField.text {
+            presenter?.registerUser(fullname: fullname, email: email, id: UUID().uuidString)
+        }
+    }
+    
+    func alert(message: String){
+        let alertController = UIAlertController(title: "Warning!", message: message, preferredStyle: .alert)
+        let alertAction = UIAlertAction(title: "OK", style: .default, handler: nil)
+        alertController.addAction(alertAction)
+        self.present(alertController, animated: true, completion: nil)
+    }
+}
 
+extension RegisterVC: RegisterDelegate {
+    func onError(_ error: Error) {
+        alert(message: error.localizedDescription)
+    }
+    
+    func registerSuccess(id: String, fullname: String, email: String) {
+        let udService = UserDefaultService.instance
+        
+        udService.userEmail = email
+        udService.userName = fullname
+        udService.userId = id
+        udService.isLoggedIn = true
+        
+        print("Successfully Registered")
+        DispatchQueue.main.async {
+            let storyboard : UIStoryboard = UIStoryboard(name: "Main", bundle: nil)
+            let main = storyboard.instantiateInitialViewController() as! UITabBarController
+            self.present(main, animated: true, completion: nil)
+        }
+    }
+    
+    func registerFailed(error: Error) {
+        alert(message: error.localizedDescription)
+    }
+    
+    
 }

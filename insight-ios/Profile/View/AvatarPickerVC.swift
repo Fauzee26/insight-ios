@@ -16,6 +16,8 @@ class AvatarPickerVC: UIViewController {
     var avatarType = AvatarType.light
     private let presenter = ProfilePresenter()
     
+    var delegate: AvatarDelegate?
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -62,14 +64,18 @@ extension AvatarPickerVC: UICollectionViewDelegate, UICollectionViewDataSource, 
     }
     
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        var name = "light\(indexPath.item)"
+        
         if avatarType == .dark {
-            presenter.setAvatarName("dark\(indexPath.item)")
-        } else {
-            presenter.setAvatarName("light\(indexPath.item)")
+            name = "dark\(indexPath.item)"
         }
         
-        NotificationCenter.default.post(name: NOTIF_USER_AVATAR_DID_CHANGE, object: nil)
+        delegate?.avatarName(name: name)
 
         self.dismiss(animated: true, completion: nil)
     }
+}
+
+protocol AvatarDelegate {
+    func avatarName(name: String)
 }

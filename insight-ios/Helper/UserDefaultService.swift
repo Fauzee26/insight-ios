@@ -7,6 +7,7 @@
 //
 
 import Foundation
+import CloudKit
 
 class UserDefaultService {
     static let instance = UserDefaultService()
@@ -14,12 +15,16 @@ class UserDefaultService {
     private let def = UserDefaults.standard
     
     fileprivate let hasLaunchedKey = "hasLaunchedKey"
+    fileprivate let isLoggedInKey = "isLoggedInKey"
     
     // User Data
     fileprivate let userNameKey = "userNameKey"
     fileprivate let userEmailKey = "emailKey"
     fileprivate let userAvatarNameKey = "userAvatarNameKey"
     fileprivate let userBgColorKey = "userBgColorKey"
+    fileprivate let userIdKey = "userIdKey"
+    
+    fileprivate let recordIdKey = "recordIdKey"
     
     var hasLaunched: Bool {
         get {
@@ -30,8 +35,25 @@ class UserDefaultService {
         }
     }
     
+    var recordId: Data {
+        get {
+            return def.data(forKey: recordIdKey) ?? Data()
+        }
+        set {
+            def.set(newValue, forKey: recordIdKey)
+        }
+    }
     
     //MARK: - User Profile Section
+    var userId: String {
+        get {
+            return def.string(forKey: userIdKey) ?? ""
+        }
+        set {
+            def.set(newValue, forKey: userIdKey)
+        }
+    }
+    
     var userName: String {
         get {
             return def.string(forKey: userNameKey) ?? ""
@@ -61,10 +83,19 @@ class UserDefaultService {
     
     var userBgColor: String {
         get {
-            return def.string(forKey: userBgColorKey) ?? ""
+            return def.string(forKey: userBgColorKey) ?? "[0.5, 0.5, 0.5, 1]"
         }
         set {
             def.set(newValue, forKey: userBgColorKey)
+        }
+    }
+    
+    var isLoggedIn: Bool {
+        get {
+            return def.bool(forKey: isLoggedInKey)
+        }
+        set {
+            def.set(newValue, forKey: isLoggedInKey)
         }
     }
 }

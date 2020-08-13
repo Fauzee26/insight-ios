@@ -8,13 +8,20 @@
 
 import Foundation
 import UIKit
+import CloudKit
+
+protocol ProfileDelegate {
+    func updateSuccessfull()
+    func updateFailed(error: Error)
+}
 
 class ProfilePresenter {
     private let udService = UserDefaultService.instance
     
-    func setAvatarName(_ avatarName: String) {
-        udService.userAvatarName = avatarName
-    }
+    //    func setAvatarName(_ avatarName: String) {
+    //        udService.userAvatarName = avatarName
+    //    }
+    private var delegate: ProfileDelegate!
     
     func setAvatarBgColor(_ color: String) {
         udService.userBgColor = color
@@ -67,5 +74,32 @@ class ProfilePresenter {
         let newUIColor = UIColor(red: rFloat, green: gFloat, blue: bFloat, alpha: aFloat)
         
         return newUIColor
+    }
+    
+    func updateProfile(email: String, fullname: String, bgColor: String, avatarName: String) {
+        let record = NSKeyedUnarchiver.unarchiveObject(with: udService.recordId) as! CKRecord
+        
+        record.setValue(email, forKey: CKUserModel.emailKey)
+        record.setValue(fullname, forKey: CKUserModel.fullnameKey)
+        record.setValue(bgColor, forKey: CKUserModel.bgColorKey)
+        record.setValue(avatarName, forKey: CKUserModel.avatarKey)
+        
+        let db = CKContainer.default().publicCloudDatabase
+        db.save(record) { (record, error) in
+            
+            if let error = error {
+                self.delegate.updateFailed(error: error)
+            } else {
+                do {
+                    let data = try NSKeyedArchiver.archivedData(withRootObject: record!, requiringSecureCoding: true)
+                    
+                    self.udService.recordId = data
+                    
+                    self.delegate.updateSuccessfull()
+                }  catch let error{
+                    self.delegate.updateFailed(error: error)
+                }
+            }
+        }
     }
 }

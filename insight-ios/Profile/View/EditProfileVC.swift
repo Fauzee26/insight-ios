@@ -18,9 +18,14 @@ class EditProfileVC: UIViewController {
     
     private var presenter = ProfilePresenter()
     private var user = User()
+
     var bgColor: UIColor?
     var strBgColor: String?
+
+    var avatarChosen = "profileDefault"
     
+    let alert = UIAlertController(title: nil, message: "Please wait...", preferredStyle: .alert)
+
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -32,14 +37,23 @@ class EditProfileVC: UIViewController {
         view.addGestureRecognizer(tap)
         
         NotificationCenter.default.addObserver(self, selector: #selector(userAvatarDidChange(_:)), name: NOTIF_USER_AVATAR_DID_CHANGE, object: nil)
-        
+    }
+    
+    @IBAction func changeAvatarPressed(_ sender: UIButton) {
+        performSegue(withIdentifier: "goToAvatarPicker", sender: self)
+    }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == "goToAvatarPicker" {
+            let avatarPickerVC = segue.destination as! AvatarPickerVC
+            avatarPickerVC.delegate = self
+        }
     }
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         user = presenter.getProfile()
         if user.userAvatar != "" {
-            imgProfile.image = UIImage(named: user.userAvatar)
             
             if user.userBgColor != "" {
                 imgProfile.backgroundColor = presenter.returnUIColor(components: user.userBgColor)
@@ -54,19 +68,18 @@ class EditProfileVC: UIViewController {
     
     @IBAction func btnSavePressed(_ sender: Any) {
         if fullNameField.text!.isEmpty {
-            alert("Full Name")
+            alert("Full Name cannot be empty")
             return
         }
         
         if emailField.text!.isEmpty {
-            alert("Email")
+            alert("Email cannot be empty")
             return
         }
         
         if let name = fullNameField.text, let email = emailField.text {
             presenter.setProfile(name: name, email: email, bgColor: strBgColor ?? "[0.5, 0.5, 0.5, 1]")
-            self.navigationController?.popViewController(animated: true)
-            NotificationCenter.default.post(name: NOTIF_USER_PROFILE_DID_CHANGE, object: nil)
+            presenter.updateProfile(email: email, fullname: name, bgColor: strBgColor ?? "[0.5, 0.5, 0.5, 1]", avatarName: avatarChosen)
         }
     }
     
@@ -78,11 +91,24 @@ class EditProfileVC: UIViewController {
         imgProfile.image = UIImage(named: presenter.getAvatarName())
     }
     
-    func alert(_ field: String ){
-        let alertController = UIAlertController(title: "Warning", message: "\(field) cannot be empty", preferredStyle: .alert)
+    func alert(_ message: String){
+        let alertController = UIAlertController(title: "Warning", message: message, preferredStyle: .alert)
         let alertAction = UIAlertAction(title: "OK", style: .default, handler: nil)
         alertController.addAction(alertAction)
         self.present(alertController, animated: true, completion: nil)
+    }
+    
+    private func showProgress() {
+        let loadingIndicator = UIActivityIndicatorView(frame: CGRect(x: 10, y: 5, width: 50, height: 50))
+        loadingIndicator.hidesWhenStopped = true
+        loadingIndicator.style = UIActivityIndicatorView.Style.medium
+        loadingIndicator.startAnimating();
+        alert.view.addSubview(loadingIndicator)
+        present(alert, animated: true, completion: nil)
+    }
+    
+    private func hideProgress() {
+        alert.dismiss(animated: true, completion: nil)
     }
     
     @IBAction func generateBgColorPressed(_ sender: Any) {
@@ -97,4 +123,24 @@ class EditProfileVC: UIViewController {
             self.imgProfile.backgroundColor = self.bgColor
         }
     }
+}
+
+extension EditProfileVC: AvatarDelegate {
+    func avatarName(name: String) {
+        avatarChosen = name
+        imgProfile.image = UIImage(named: avatarChosen)
+    }
+}
+
+extension EditProfileVC: ProfileDelegate {
+    func updateSuccessfull() {
+        self.navigationController?.popViewController(animated: true)
+        NotificationCenter.default.post(name: NOTIF_USER_PROFILE_DID_CHANGE, object: nil)
+    }
+    
+    func updateFailed(error: Error) {
+        alert(error.localizedDescription)
+    }
+    
+    
 }

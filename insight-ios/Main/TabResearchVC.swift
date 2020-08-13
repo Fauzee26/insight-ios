@@ -16,20 +16,21 @@ class TabResearchVC: UIViewController {
         // Do any additional setup after loading the view.
     }
     
-    @IBAction func addNewProjectPressed(_ sender: UIBarButtonItem) {
-//        let storyboard : UIStoryboard = UIStoryboard(name: "Research", bundle: nil)
-//        let addProjectVC = storyboard.instantiateViewController(withIdentifier: "AddProjectVC") as! AddProjectVC
-//        present(addProjectVC, animated: true, completion: nil)
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        
+//        let udService = UserDefaultService.instance
+//        if udService.isLoggedIn == false {
+//            let storyboard = UIStoryboard(name: "Auth", bundle: nil)
+//            let navAuth = storyboard.instantiateInitialViewController() as! UINavigationController
+//            let loginVC = navAuth.topViewController as! LoginVC
+//            let nav = UINavigationController(rootViewController: loginVC)
+//            present(nav, animated: true, completion: nil)
+//        }
     }
     
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
+    @IBAction func addNewProjectPressed(_ sender: UIBarButtonItem) {
+        
     }
-    */
 
 }

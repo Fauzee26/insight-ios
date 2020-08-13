@@ -262,9 +262,16 @@
                     </view>
                     <navigationItem key="navigationItem" title="Profile" id="YbZ-5R-mTV">
                         <barButtonItem key="backBarButtonItem" title="My Profile" id="TEy-OQ-YcR"/>
+                        <barButtonItem key="rightBarButtonItem" title="Logout" id="RM1-KO-PmH">
+                            <color key="tintColor" name="grey"/>
+                            <connections>
+                                <action selector="logoutPressed:" destination="On3-vh-nhd" id="egG-Mb-BLW"/>
+                            </connections>
+                        </barButtonItem>
                     </navigationItem>
                     <connections>
                         <outlet property="imgProfile" destination="ill-mR-WBY" id="FL0-WK-7gb"/>
+                        <outlet property="rightBar" destination="RM1-KO-PmH" id="egY-Xs-fte"/>
                         <outlet property="txtEmailProfile" destination="pQp-uh-aJe" id="vVf-yT-mL4"/>
                         <outlet property="txtNameProfile" destination="daN-oY-mnO" id="Rsh-Vz-aPI"/>
                         <outlet property="viewProfile" destination="dyo-Mp-bKq" id="Gcm-91-1OU"/>
@@ -336,7 +343,7 @@
         <!--Tab Bar Controller-->
         <scene sceneID="Cre-qj-nde">
             <objects>
-                <tabBarController id="ElQ-Yr-zNQ" sceneMemberID="viewController">
+                <tabBarController modalTransitionStyle="crossDissolve" modalPresentationStyle="fullScreen" id="ElQ-Yr-zNQ" sceneMemberID="viewController">
                     <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="YEO-zg-2Z6">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="49"/>
                         <autoresizingMask key="autoresizingMask"/>
