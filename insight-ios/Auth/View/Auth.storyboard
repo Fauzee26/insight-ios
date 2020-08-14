@@ -11,7 +11,7 @@
         <!--Login-->
         <scene sceneID="HHn-Nc-XkQ">
             <objects>
-                <viewController id="koy-Qm-WLW" customClass="LoginVC" customModule="insight_ios" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="koy-Qm-WLW" customClass="LoginVC" customModule="Insight" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="twt-bz-8yd">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -177,7 +177,7 @@
         <!--Register-->
         <scene sceneID="mLk-PI-01w">
             <objects>
-                <viewController id="1XV-eE-Zif" customClass="RegisterVC" customModule="insight_ios" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="1XV-eE-Zif" customClass="RegisterVC" customModule="Insight" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="Ka7-fu-kPg">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -201,7 +201,7 @@
                                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <color key="tintColor" red="0.98443096880000003" green="0.98003262280000003" blue="1" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                                <textInputTraits key="textInputTraits" keyboardType="emailAddress"/>
+                                                <textInputTraits key="textInputTraits"/>
                                             </textField>
                                         </subviews>
                                         <color key="backgroundColor" name="bg-auth-color"/>
@@ -398,7 +398,7 @@
         <image name="Shape" width="13" height="14"/>
         <image name="lock-ico" width="11" height="14"/>
         <namedColor name="bg-auth-color">
-            <color red="0.98431372549019602" green="0.98039215686274506" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <color red="0.98400002717971802" green="0.98000001907348633" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
         <namedColor name="grey">
             <color red="0.60799998044967651" green="0.60000002384185791" blue="0.66299998760223389" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>

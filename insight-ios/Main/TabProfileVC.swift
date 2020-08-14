@@ -66,6 +66,8 @@ class TabProfileVC: UIViewController {
         udService.userName = ""
         udService.userEmail = ""
         udService.userId = ""
+        udService.userAvatarName = "profileDefault"
+        udService.userBgColor = "[0.5, 0.5, 0.5, 1]"
         
         let storyboard = UIStoryboard(name: "Auth", bundle: nil)
         let navAuth = storyboard.instantiateInitialViewController() as! UINavigationController

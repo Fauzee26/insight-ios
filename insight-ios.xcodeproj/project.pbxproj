@@ -8,6 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		5901666624E4D1C60041D7EB /* LoginPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5901666524E4D1C60041D7EB /* LoginPresenter.swift */; };
+		5901666824E5498F0041D7EB /* Util.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5901666724E5498F0041D7EB /* Util.swift */; };
+		5901666A24E635CF0041D7EB /* ModelGuide.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5901666924E635CE0041D7EB /* ModelGuide.swift */; };
 		5930697624DD69EF0064DCFB /* AvatarPickerVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5930697524DD69EF0064DCFB /* AvatarPickerVC.swift */; };
 		5930697924DD6B4D0064DCFB /* AvatarCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5930697824DD6B4D0064DCFB /* AvatarCell.swift */; };
 		5930697D24DE50430064DCFB /* UserDefaultService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5930697C24DE50430064DCFB /* UserDefaultService.swift */; };
@@ -54,6 +56,8 @@
 /* Begin PBXFileReference section */
 		0A6527C6BA69D2938B1F8FE8 /* Pods-insight-ios.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-insight-ios.release.xcconfig"; path = "Target Support Files/Pods-insight-ios/Pods-insight-ios.release.xcconfig"; sourceTree = "<group>"; };
 		5901666524E4D1C60041D7EB /* LoginPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginPresenter.swift; sourceTree = "<group>"; };
+		5901666724E5498F0041D7EB /* Util.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Util.swift; sourceTree = "<group>"; };
+		5901666924E635CE0041D7EB /* ModelGuide.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ModelGuide.swift; sourceTree = "<group>"; };
 		5930697524DD69EF0064DCFB /* AvatarPickerVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AvatarPickerVC.swift; sourceTree = "<group>"; };
 		5930697824DD6B4D0064DCFB /* AvatarCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AvatarCell.swift; sourceTree = "<group>"; };
 		5930697C24DE50430064DCFB /* UserDefaultService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserDefaultService.swift; sourceTree = "<group>"; };
@@ -214,6 +218,7 @@
 				5930697C24DE50430064DCFB /* UserDefaultService.swift */,
 				5930698024DE539D0064DCFB /* Enums.swift */,
 				5930698424DE60BB0064DCFB /* Constans.swift */,
+				5901666724E5498F0041D7EB /* Util.swift */,
 			);
 			path = Helper;
 			sourceTree = "<group>";
@@ -294,6 +299,7 @@
 		5995C42C24D67BBB00B5FCB5 /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				5901666924E635CE0041D7EB /* ModelGuide.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -507,6 +513,7 @@
 				5930697924DD6B4D0064DCFB /* AvatarCell.swift in Sources */,
 				5995C43724D6D8C800B5FCB5 /* ProjectCell.swift in Sources */,
 				5995C47824DA9C0100B5FCB5 /* BorderView.swift in Sources */,
+				5901666A24E635CF0041D7EB /* ModelGuide.swift in Sources */,
 				5995C42324D67A1100B5FCB5 /* RegisterVC.swift in Sources */,
 				5995C43B24D7BFEB00B5FCB5 /* AddProjectVC.swift in Sources */,
 				5995C47E24DB9E4200B5FCB5 /* HotTopicCell.swift in Sources */,
@@ -525,6 +532,7 @@
 				5989281A24E4C77C00B1013C /* RegisterPresenter.swift in Sources */,
 				5995C47624DA98B700B5FCB5 /* RoundedViewOnlyTop.swift in Sources */,
 				5995C47224DA929500B5FCB5 /* TabProfileVC.swift in Sources */,
+				5901666824E5498F0041D7EB /* Util.swift in Sources */,
 				5930698524DE60BB0064DCFB /* Constans.swift in Sources */,
 				5995C46E24DA8E8300B5FCB5 /* EditProfileVC.swift in Sources */,
 			);

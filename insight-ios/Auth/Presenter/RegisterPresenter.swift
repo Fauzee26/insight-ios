@@ -11,9 +11,8 @@ import CloudKit
 
 protocol RegisterDelegate {
     func onError(_ error: Error)
-    //    func onChange()
     
-    func registerSuccess(id: String, fullname: String, email: String)
+    func registerSuccess(record: CKRecord)
     func registerFailed(error: Error)
 }
 class RegisterPresenter {
@@ -45,7 +44,7 @@ class RegisterPresenter {
         }
     }
     
-    func registerUser(fullname: String, email: String, id: String) {
+    func registerUser(fullname: String, email: String, id: String, password: String) {
         var user = CKUserModel()
         
         user.id = id
@@ -53,6 +52,7 @@ class RegisterPresenter {
         user.fullname = fullname
         user.avatar = "profileDefault"
         user.bgColor = "[0.5, 0.5, 0.5, 1]"
+        user.password = password
         
         db.save(user.record) { (record, error) in
             if let error = error {
@@ -61,12 +61,12 @@ class RegisterPresenter {
             } else {
                 do {
                     let data = try NSKeyedArchiver.archivedData(withRootObject: record!, requiringSecureCoding: true)
-                UserDefaultService.instance.recordId = data
+                    UserDefaultService.instance.recordId = data
                     
-                self.delegate.registerSuccess(id: id, fullname: fullname, email: email)
-                
+                    self.delegate.registerSuccess(record: record!)
+                    
                 } catch let error {
-                self.delegate.registerFailed(error: error)
+                    self.delegate.registerFailed(error: error)
                 }
             }
         }

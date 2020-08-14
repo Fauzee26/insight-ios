@@ -17,6 +17,7 @@ struct CKUserModel {
     static let emailKey = "userEmail"
     static let fullnameKey = "userFullName"
     static let idKey = "userIdentifier"
+    static let passwordKey = "userPassword"
     
     var record: CKRecord
     
@@ -26,6 +27,15 @@ struct CKUserModel {
     
     init() {
         self.record = CKRecord(recordType: CKUserModel.recordType)
+    }
+    
+    var password: String {
+        get {
+            return self.record.value(forKey: CKUserModel.passwordKey) as! String
+        }
+        set {
+            self.record.setValue(newValue, forKey: CKUserModel.passwordKey)
+        }
     }
     
     var fullname: String {

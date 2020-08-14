@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import CloudKit
 
 class RegisterVC: UIViewController {
     
@@ -58,8 +59,10 @@ class RegisterVC: UIViewController {
             return
         }
         
-        if let fullname = fullNameField.text, let email = emailField.text {
-            presenter?.registerUser(fullname: fullname, email: email, id: UUID().uuidString)
+        if let fullname = fullNameField.text, let email = emailField.text, let password = passwordField.text {
+            showProgress()
+            presenter?.registerUser(fullname: fullname, email: email, id: UUID().uuidString, password: password)
+            view.endEditing(true)
         }
     }
     
@@ -72,16 +75,15 @@ class RegisterVC: UIViewController {
 }
 
 extension RegisterVC: RegisterDelegate {
-    func onError(_ error: Error) {
-        alert(message: error.localizedDescription)
-    }
-    
-    func registerSuccess(id: String, fullname: String, email: String) {
+    func registerSuccess(record: CKRecord) {
+        hideProgress()
         let udService = UserDefaultService.instance
         
-        udService.userEmail = email
-        udService.userName = fullname
-        udService.userId = id
+        udService.userEmail = record["userEmail"] as! String
+        udService.userName = record["userFullName"] as! String
+        udService.userId = record["userIdentifier"] as! String
+        udService.userAvatarName = record["userAvatar"] as! String
+        udService.userBgColor = record["userBackgroundColor"] as! String
         udService.isLoggedIn = true
         
         print("Successfully Registered")
@@ -92,9 +94,15 @@ extension RegisterVC: RegisterDelegate {
         }
     }
     
-    func registerFailed(error: Error) {
+    func onError(_ error: Error) {
         alert(message: error.localizedDescription)
     }
     
-    
+    func registerFailed(error: Error) {
+        hideProgress()
+        
+        DispatchQueue.main.async {
+            self.alert(message: error.localizedDescription)
+        }
+    }
 }

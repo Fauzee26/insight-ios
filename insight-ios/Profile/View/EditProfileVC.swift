@@ -18,17 +18,16 @@ class EditProfileVC: UIViewController {
     
     private var presenter = ProfilePresenter()
     private var user = User()
-
+    
     var bgColor: UIColor?
     var strBgColor: String?
 
     var avatarChosen = "profileDefault"
     
-    let alert = UIAlertController(title: nil, message: "Please wait...", preferredStyle: .alert)
-
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        presenter.delegate = self
         btnSave.layer.cornerRadius = btnSave.frame.height / 2
         imgProfile.layer.cornerRadius = imgProfile.frame.height / 2
         btnSave.setGradientBackgroundColors([#colorLiteral(red: 0.01568627451, green: 0.8, blue: 0.6, alpha: 1), #colorLiteral(red: 0.1647058824, green: 0.6980392157, blue: 0.7333333333, alpha: 1)], direction: .toRight, for: .normal)
@@ -54,7 +53,8 @@ class EditProfileVC: UIViewController {
         super.viewWillAppear(animated)
         user = presenter.getProfile()
         if user.userAvatar != "" {
-            
+            imgProfile.image = UIImage(named: user.userAvatar)
+            avatarChosen = user.userAvatar
             if user.userBgColor != "" {
                 imgProfile.backgroundColor = presenter.returnUIColor(components: user.userBgColor)
             } else if user.userAvatar.contains("light") && user.userBgColor == "" {
@@ -77,9 +77,12 @@ class EditProfileVC: UIViewController {
             return
         }
         
+        let getBGColorRGBA = imgProfile.backgroundColor?.rgba
+        let returnedRGBAString = "[\(getBGColorRGBA!.red), \(getBGColorRGBA!.green), \(getBGColorRGBA!.blue), \(getBGColorRGBA!.alpha)]"
+        print(returnedRGBAString)
+        
         if let name = fullNameField.text, let email = emailField.text {
-            presenter.setProfile(name: name, email: email, bgColor: strBgColor ?? "[0.5, 0.5, 0.5, 1]")
-            presenter.updateProfile(email: email, fullname: name, bgColor: strBgColor ?? "[0.5, 0.5, 0.5, 1]", avatarName: avatarChosen)
+            presenter.updateProfile(email: email, fullname: name, bgColor: returnedRGBAString, avatarName: avatarChosen)
         }
     }
     
@@ -96,19 +99,6 @@ class EditProfileVC: UIViewController {
         let alertAction = UIAlertAction(title: "OK", style: .default, handler: nil)
         alertController.addAction(alertAction)
         self.present(alertController, animated: true, completion: nil)
-    }
-    
-    private func showProgress() {
-        let loadingIndicator = UIActivityIndicatorView(frame: CGRect(x: 10, y: 5, width: 50, height: 50))
-        loadingIndicator.hidesWhenStopped = true
-        loadingIndicator.style = UIActivityIndicatorView.Style.medium
-        loadingIndicator.startAnimating();
-        alert.view.addSubview(loadingIndicator)
-        present(alert, animated: true, completion: nil)
-    }
-    
-    private func hideProgress() {
-        alert.dismiss(animated: true, completion: nil)
     }
     
     @IBAction func generateBgColorPressed(_ sender: Any) {
@@ -134,12 +124,14 @@ extension EditProfileVC: AvatarDelegate {
 
 extension EditProfileVC: ProfileDelegate {
     func updateSuccessfull() {
-        self.navigationController?.popViewController(animated: true)
-        NotificationCenter.default.post(name: NOTIF_USER_PROFILE_DID_CHANGE, object: nil)
+        DispatchQueue.main.async {
+            self.navigationController?.popViewController(animated: true)
+            NotificationCenter.default.post(name: NOTIF_USER_PROFILE_DID_CHANGE, object: nil)
+        }
     }
     
     func updateFailed(error: Error) {
-        alert(error.localizedDescription)
+        print(error.localizedDescription)
     }
     
     
