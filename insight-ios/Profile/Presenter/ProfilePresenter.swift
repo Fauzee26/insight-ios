@@ -47,34 +47,38 @@ class ProfilePresenter {
         return User(userName: name, userEmail: email, userAvatar: avatar, userBgColor: color)
     }
     
-    func returnUIColor(components: String) -> UIColor {
-        let scanner = Scanner(string: components)
-        let skipped = CharacterSet(charactersIn: "[], ")
-        let comma = CharacterSet(charactersIn: ",")
-        scanner.charactersToBeSkipped = skipped
+    func isEmailAvailable(email: String, completion: @escaping (_ isAvailable: Bool) -> ()) {
+        let container: CKContainer = CKContainer.default()
+        let publicDB: CKDatabase = container.publicCloudDatabase
         
-        var r, g, b, a: NSString?
+        let predicate = NSPredicate(value: true)
+        let query = CKQuery(recordType: "UserData", predicate: predicate)
         
-        r = scanner.scanUpToCharacters(from: comma) as NSString?
-        g = scanner.scanUpToCharacters(from: comma) as NSString?
-        b = scanner.scanUpToCharacters(from: comma) as NSString?
-        a = scanner.scanUpToCharacters(from: comma) as NSString?
-        
-        let defaultColor = UIColor.lightGray
-        
-        guard let rUnwrapped = r else {return defaultColor}
-        guard let gUnwrapped = g else {return defaultColor}
-        guard let bUnwrapped = b else {return defaultColor}
-        guard let aUnwrapped = a else {return defaultColor}
-        
-        let rFloat = CGFloat(rUnwrapped.doubleValue)
-        let gFloat = CGFloat(gUnwrapped.doubleValue)
-        let bFloat = CGFloat(bUnwrapped.doubleValue)
-        let aFloat = CGFloat(aUnwrapped.doubleValue)
-        
-        let newUIColor = UIColor(red: rFloat, green: gFloat, blue: bFloat, alpha: aFloat)
-        
-        return newUIColor
+        publicDB.perform(query, inZoneWith: CKRecordZone.default().zoneID) { (arrayResults, error) in
+            if let err = error {
+                self.delegate.updateFailed(error: err)
+                return
+            }
+            
+            guard let results = arrayResults else {return}
+            var recordCount = 0
+            
+            for record in results {
+                if recordCount <= 1 {
+                    let emailRecord = record[CKUserModel.emailKey] as? String
+                    if emailRecord == email {
+                        print("email is here")
+                        completion(false)
+                        recordCount += 1
+                    }
+                }
+            }
+            
+            if recordCount == 0 {
+                completion(true)
+            }
+            
+        }
     }
     
     func updateProfile(email: String, fullname: String, bgColor: String, avatarName: String) {

@@ -10,8 +10,8 @@
         <!--List TopicVC-->
         <scene sceneID="5SY-Ti-xDo">
             <objects>
-                <viewController id="d6J-PQ-IeM" customClass="ListTopicVC" customModule="insight_ios" customModuleProvider="target" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="IST-qd-BDn" customClass="GradientView" customModule="insight_ios" customModuleProvider="target">
+                <viewController id="d6J-PQ-IeM" customClass="ListTopicVC" customModule="Insight" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="IST-qd-BDn" customClass="GradientView" customModule="Insight" customModuleProvider="target">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
@@ -19,7 +19,7 @@
                                 <rect key="frame" x="0.0" y="862" width="414" height="34"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                             </view>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="XUF-F6-ObZ" customClass="RoundedOnlyTopView" customModule="insight_ios" customModuleProvider="target">
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="XUF-F6-ObZ" customClass="RoundedOnlyTopView" customModule="Insight" customModuleProvider="target">
                                 <rect key="frame" x="0.0" y="9" width="414" height="853"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Hot Topic" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="O4K-KT-zMY">
@@ -28,7 +28,7 @@
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="200" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="9a6-sW-Vcm">
+                                    <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="220" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="9a6-sW-Vcm">
                                         <rect key="frame" x="20" y="64" width="374" height="789"/>
                                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                                     </tableView>
@@ -73,32 +73,32 @@
         <!--Detail TopicVC-->
         <scene sceneID="66l-n6-JT4">
             <objects>
-                <viewController storyboardIdentifier="DetailTopicVC" modalPresentationStyle="fullScreen" id="6AS-Cd-WSc" customClass="DetailTopicVC" customModule="insight_ios" customModuleProvider="target" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="ohj-rh-CzP" customClass="GradientView" customModule="insight_ios" customModuleProvider="target">
+                <viewController storyboardIdentifier="DetailTopicVC" modalPresentationStyle="fullScreen" id="6AS-Cd-WSc" customClass="DetailTopicVC" customModule="Insight" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="ohj-rh-CzP" customClass="GradientView" customModule="Insight" customModuleProvider="target">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="M27-yQ-NFP" customClass="RoundedOnlyTopView" customModule="insight_ios" customModuleProvider="target">
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="M27-yQ-NFP" customClass="RoundedOnlyTopView" customModule="Insight" customModuleProvider="target">
                                 <rect key="frame" x="0.0" y="9" width="414" height="853"/>
                                 <subviews>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="User Mapping" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7KG-E2-FPC">
-                                        <rect key="frame" x="30" y="20" width="189.5" height="36"/>
-                                        <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="30"/>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="3 obstacle that many beginners get stumped over while analizing UX data" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7KG-E2-FPC">
+                                        <rect key="frame" x="30" y="20" width="364" height="90"/>
+                                        <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="25"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="dummy" translatesAutoresizingMaskIntoConstraints="NO" id="4Kd-ra-FQC">
-                                        <rect key="frame" x="20" y="76" width="374" height="220"/>
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="dummy" translatesAutoresizingMaskIntoConstraints="NO" id="4Kd-ra-FQC">
+                                        <rect key="frame" x="20" y="130" width="374" height="220"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="220" id="mhN-Vd-7xj"/>
                                         </constraints>
                                     </imageView>
                                     <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="m0C-Qc-cBD">
-                                        <rect key="frame" x="20" y="312" width="374" height="521"/>
+                                        <rect key="frame" x="20" y="366" width="374" height="467"/>
                                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
-                                        <mutableString key="text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam ac leo nec diam iaculis consectetur. Donec nunc odio, dignissim ac semper id, euismod sodales libero. Ut rhoncus pellentesque viverra. Suspendisse mollis magna sit amet purus tincidunt, at maximus justo dignissim. 
+                                        <string key="text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam ac leo nec diam iaculis consectetur. Donec nunc odio, dignissim ac semper id, euismod sodales libero. Ut rhoncus pellentesque viverra. Suspendisse mollis magna sit amet purus tincidunt, at maximus justo dignissim. 
 
-Quisque et blandit ligula, a imperdiet justo. In molestie congue nisl, non porta nunc laoreet et. Pellentesque elementum maximus venenatis. Ut eleifend felis leo, nec molestie libero maximus a. Donec non arcu non arcu bibendum consectetur. Fusce dui neque, pellentesque vel pulvinar sit amet, pharetra at dui. Quisque in efficitur velit, ut lobortis libero. Donec feugiat turpis non ante ornare accumsan.</mutableString>
+Quisque et blandit ligula, a imperdiet justo. In molestie congue nisl, non porta nunc laoreet et. Pellentesque elementum maximus venenatis. Ut eleifend felis leo, nec molestie libero maximus a. Donec non arcu non arcu bibendum consectetur. Fusce dui neque, pellentesque vel pulvinar sit amet, pharetra at dui. Quisque in efficitur velit, ut lobortis libero. Donec feugiat turpis non ante ornare accumsan.</string>
                                         <color key="textColor" systemColor="labelColor" cocoaTouchSystemColor="darkTextColor"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                         <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
@@ -112,6 +112,7 @@ Quisque et blandit ligula, a imperdiet justo. In molestie congue nisl, non porta
                                     <constraint firstAttribute="trailing" secondItem="m0C-Qc-cBD" secondAttribute="trailing" constant="20" id="MZP-Ji-Rrm"/>
                                     <constraint firstItem="4Kd-ra-FQC" firstAttribute="leading" secondItem="M27-yQ-NFP" secondAttribute="leading" constant="20" id="PYU-Cx-325"/>
                                     <constraint firstItem="m0C-Qc-cBD" firstAttribute="top" secondItem="4Kd-ra-FQC" secondAttribute="bottom" constant="16" id="aJc-c3-Ugh"/>
+                                    <constraint firstAttribute="trailing" secondItem="7KG-E2-FPC" secondAttribute="trailing" constant="20" id="cEF-41-mSb"/>
                                     <constraint firstItem="m0C-Qc-cBD" firstAttribute="leading" secondItem="M27-yQ-NFP" secondAttribute="leading" constant="20" id="lBd-EM-g8w"/>
                                     <constraint firstItem="7KG-E2-FPC" firstAttribute="leading" secondItem="M27-yQ-NFP" secondAttribute="leading" constant="30" id="mPF-gR-Jp9"/>
                                     <constraint firstAttribute="bottom" secondItem="m0C-Qc-cBD" secondAttribute="bottom" constant="20" id="q07-mX-dHH"/>

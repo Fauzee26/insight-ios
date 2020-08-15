@@ -10,6 +10,9 @@
 		5901666624E4D1C60041D7EB /* LoginPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5901666524E4D1C60041D7EB /* LoginPresenter.swift */; };
 		5901666824E5498F0041D7EB /* Util.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5901666724E5498F0041D7EB /* Util.swift */; };
 		5901666A24E635CF0041D7EB /* ModelGuide.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5901666924E635CE0041D7EB /* ModelGuide.swift */; };
+		5901666C24E637460041D7EB /* GuidePresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5901666B24E637460041D7EB /* GuidePresenter.swift */; };
+		5901666E24E7CE6D0041D7EB /* CKResearchModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5901666D24E7CE6D0041D7EB /* CKResearchModel.swift */; };
+		5901667024E7D1EA0041D7EB /* AddProjectPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5901666F24E7D1EA0041D7EB /* AddProjectPresenter.swift */; };
 		5930697624DD69EF0064DCFB /* AvatarPickerVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5930697524DD69EF0064DCFB /* AvatarPickerVC.swift */; };
 		5930697924DD6B4D0064DCFB /* AvatarCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5930697824DD6B4D0064DCFB /* AvatarCell.swift */; };
 		5930697D24DE50430064DCFB /* UserDefaultService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5930697C24DE50430064DCFB /* UserDefaultService.swift */; };
@@ -17,6 +20,7 @@
 		5930698124DE539D0064DCFB /* Enums.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5930698024DE539D0064DCFB /* Enums.swift */; };
 		5930698324DE54A10064DCFB /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5930698224DE54A10064DCFB /* User.swift */; };
 		5930698524DE60BB0064DCFB /* Constans.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5930698424DE60BB0064DCFB /* Constans.swift */; };
+		593CF6E324E8321E009C3633 /* ListProjectPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 593CF6E224E8321E009C3633 /* ListProjectPresenter.swift */; };
 		5959C0C024D07F33003963F3 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5959C0BF24D07F33003963F3 /* AppDelegate.swift */; };
 		5959C0C224D07F33003963F3 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5959C0C124D07F33003963F3 /* SceneDelegate.swift */; };
 		5959C0C724D07F34003963F3 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5959C0C524D07F34003963F3 /* Main.storyboard */; };
@@ -58,6 +62,9 @@
 		5901666524E4D1C60041D7EB /* LoginPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginPresenter.swift; sourceTree = "<group>"; };
 		5901666724E5498F0041D7EB /* Util.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Util.swift; sourceTree = "<group>"; };
 		5901666924E635CE0041D7EB /* ModelGuide.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ModelGuide.swift; sourceTree = "<group>"; };
+		5901666B24E637460041D7EB /* GuidePresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GuidePresenter.swift; sourceTree = "<group>"; };
+		5901666D24E7CE6D0041D7EB /* CKResearchModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CKResearchModel.swift; sourceTree = "<group>"; };
+		5901666F24E7D1EA0041D7EB /* AddProjectPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddProjectPresenter.swift; sourceTree = "<group>"; };
 		5930697524DD69EF0064DCFB /* AvatarPickerVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AvatarPickerVC.swift; sourceTree = "<group>"; };
 		5930697824DD6B4D0064DCFB /* AvatarCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AvatarCell.swift; sourceTree = "<group>"; };
 		5930697C24DE50430064DCFB /* UserDefaultService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserDefaultService.swift; sourceTree = "<group>"; };
@@ -65,6 +72,7 @@
 		5930698024DE539D0064DCFB /* Enums.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Enums.swift; sourceTree = "<group>"; };
 		5930698224DE54A10064DCFB /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 		5930698424DE60BB0064DCFB /* Constans.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constans.swift; sourceTree = "<group>"; };
+		593CF6E224E8321E009C3633 /* ListProjectPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListProjectPresenter.swift; sourceTree = "<group>"; };
 		5959C0BC24D07F33003963F3 /* Insight.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Insight.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		5959C0BF24D07F33003963F3 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		5959C0C124D07F33003963F3 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -247,6 +255,7 @@
 		5995C42624D67B6800B5FCB5 /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				5901666D24E7CE6D0041D7EB /* CKResearchModel.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -264,6 +273,8 @@
 		5995C42824D67B7100B5FCB5 /* Presenter */ = {
 			isa = PBXGroup;
 			children = (
+				5901666F24E7D1EA0041D7EB /* AddProjectPresenter.swift */,
+				593CF6E224E8321E009C3633 /* ListProjectPresenter.swift */,
 			);
 			path = Presenter;
 			sourceTree = "<group>";
@@ -281,6 +292,7 @@
 		5995C42A24D67BB100B5FCB5 /* Presenter */ = {
 			isa = PBXGroup;
 			children = (
+				5901666B24E637460041D7EB /* GuidePresenter.swift */,
 			);
 			path = Presenter;
 			sourceTree = "<group>";
@@ -509,6 +521,7 @@
 				5989281C24E4C8CF00B1013C /* CKUserModel.swift in Sources */,
 				5995C42124D6733700B5FCB5 /* RoundedButton.swift in Sources */,
 				5959C0CA24D07F34003963F3 /* insight_ios.xcdatamodeld in Sources */,
+				5901667024E7D1EA0041D7EB /* AddProjectPresenter.swift in Sources */,
 				5930698324DE54A10064DCFB /* User.swift in Sources */,
 				5930697924DD6B4D0064DCFB /* AvatarCell.swift in Sources */,
 				5995C43724D6D8C800B5FCB5 /* ProjectCell.swift in Sources */,
@@ -521,9 +534,12 @@
 				5959C0C024D07F33003963F3 /* AppDelegate.swift in Sources */,
 				5995C43F24D7C15600B5FCB5 /* TabResearchVC.swift in Sources */,
 				5930697624DD69EF0064DCFB /* AvatarPickerVC.swift in Sources */,
+				5901666C24E637460041D7EB /* GuidePresenter.swift in Sources */,
 				5995C47424DA949900B5FCB5 /* Protocols.swift in Sources */,
+				5901666E24E7CE6D0041D7EB /* CKResearchModel.swift in Sources */,
 				5930697D24DE50430064DCFB /* UserDefaultService.swift in Sources */,
 				5995C48824DC142D00B5FCB5 /* AllTopicCell.swift in Sources */,
+				593CF6E324E8321E009C3633 /* ListProjectPresenter.swift in Sources */,
 				5930697F24DE52FF0064DCFB /* ProfilePresenter.swift in Sources */,
 				5995C47024DA928B00B5FCB5 /* TabGuideVC.swift in Sources */,
 				5930698124DE539D0064DCFB /* Enums.swift in Sources */,

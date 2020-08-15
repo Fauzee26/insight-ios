@@ -13,12 +13,19 @@ class TabGuideVC: UIViewController {
     @IBOutlet weak var collectionViewHotTopic: UICollectionView!
     @IBOutlet weak var tableViewForum: UITableView!
     
+    var guides = [Guide]()
+    var presenter: GuidePresenter?
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
+        presenter = GuidePresenter(delegate: self)
         collectionViewHotTopic.delegate = self
         collectionViewHotTopic.dataSource = self
         collectionViewHotTopic.register(UINib(nibName: "HotTopicCell", bundle: self.nibBundle), forCellWithReuseIdentifier: "hotTopicCell")
+        
+        tableViewForum.setEmptyState(title: "Sorry :(", message: "This feature not available yet")
+        presenter?.getAllData()
     }
     
     @IBAction func btnSeeAllHotTopicPressed(_ sender: UIButton) {
@@ -32,13 +39,14 @@ class TabGuideVC: UIViewController {
 
 extension TabGuideVC: UICollectionViewDelegate, UICollectionViewDataSource, UICollectionViewDelegateFlowLayout {
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return 3
+        return guides.count
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         guard let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "hotTopicCell", for: indexPath) as? HotTopicCell else {return UICollectionViewCell()}
         
-        cell.configureCell(image: UIImage(named: "dummy")!, name: "Usability Test")
+        let guide = guides[indexPath.row]
+        cell.configureCell(guide: guide)
         
         return cell
     }
@@ -50,7 +58,36 @@ extension TabGuideVC: UICollectionViewDelegate, UICollectionViewDataSource, UICo
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
         let storyboard = UIStoryboard(name: "Guide", bundle: nil)
         let vc = storyboard.instantiateViewController(identifier: "DetailTopicVC") as! DetailTopicVC
+        vc.guide = guides[indexPath.row]
         
         self.navigationController?.pushViewController(vc, animated: true)
     }
+}
+
+extension TabGuideVC: GuideDelegate {
+    func dataGuideSuccess(arrayGuide: [Guide]) {
+        var first3Guide = [Guide]()
+        var count = 0
+        if arrayGuide.count >= 3 {
+            for g in arrayGuide {
+                if count <= 2 {
+                    first3Guide.append(g)
+                    count += 1
+                }
+            }
+        } else {
+            first3Guide = arrayGuide
+        }
+        
+        guides = first3Guide
+        DispatchQueue.main.async {
+            self.collectionViewHotTopic.reloadData()
+        }
+    }
+    
+    func dataGuideFailed(err: Error) {
+        print("error tab research: ", err.localizedDescription)
+    }
+    
+    
 }

@@ -167,12 +167,6 @@ extension LoginVC: ASAuthorizationControllerDelegate {
         //        alert(for: "Sign In Failed", and: error.localizedDescription)
     }
     
-    func alert(forTitle title: String, andMessage message: String){
-        let alertController = UIAlertController(title: title, message: message, preferredStyle: .alert)
-        let alertAction = UIAlertAction(title: "OK", style: .default, handler: nil)
-        alertController.addAction(alertAction)
-        self.present(alertController, animated: true)
-    }
 }
 
 extension LoginVC: LoginDelegate {

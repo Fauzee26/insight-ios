@@ -9,15 +9,84 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
-        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" id="KGk-i7-Jjw" customClass="ProjectCell" customModule="insight_ios" customModuleProvider="target">
-            <rect key="frame" x="0.0" y="0.0" width="320" height="150"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="projectCell" id="KGk-i7-Jjw" customClass="ProjectCell" customModule="Insight" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="414" height="135"/>
             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
             <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
-                <rect key="frame" x="0.0" y="0.0" width="320" height="150"/>
+                <rect key="frame" x="0.0" y="0.0" width="414" height="135"/>
                 <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Web Travel" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ub9-Pc-nfJ">
+                        <rect key="frame" x="20" y="8" width="150" height="36"/>
+                        <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="30"/>
+                        <nil key="textColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Mobile App Product" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cfi-eY-0Xu">
+                        <rect key="frame" x="20" y="60" width="162" height="20.5"/>
+                        <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
+                        <nil key="textColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Created on 24 June 2020" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="tCk-iP-ndd">
+                        <rect key="frame" x="20" y="80.5" width="175.5" height="18"/>
+                        <fontDescription key="fontDescription" type="italicSystem" pointSize="15"/>
+                        <nil key="textColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Estimation Finished 12 December 2021" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hfW-6z-Sfh">
+                        <rect key="frame" x="20" y="98.5" width="250.5" height="17"/>
+                        <fontDescription key="fontDescription" type="italicSystem" pointSize="14"/>
+                        <nil key="textColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="light0" translatesAutoresizingMaskIntoConstraints="NO" id="d6v-7C-9Vf">
+                        <rect key="frame" x="342" y="11" width="30" height="30"/>
+                        <color key="backgroundColor" systemColor="systemPinkColor" red="1" green="0.1764705882" blue="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="30" id="ZTG-xB-II8"/>
+                            <constraint firstAttribute="width" constant="30" id="yRY-eQ-MxA"/>
+                        </constraints>
+                    </imageView>
+                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="center" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="plus.circle" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="dB6-yM-BFa">
+                        <rect key="frame" x="364" y="11.5" width="30" height="29"/>
+                        <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="30" id="YVb-DM-fyU"/>
+                            <constraint firstAttribute="width" constant="30" id="jCR-ky-mLL"/>
+                        </constraints>
+                    </imageView>
+                </subviews>
+                <constraints>
+                    <constraint firstItem="hfW-6z-Sfh" firstAttribute="top" secondItem="tCk-iP-ndd" secondAttribute="bottom" id="0ud-UP-auc"/>
+                    <constraint firstItem="d6v-7C-9Vf" firstAttribute="centerY" secondItem="Ub9-Pc-nfJ" secondAttribute="centerY" id="4cR-hR-mUU"/>
+                    <constraint firstItem="tCk-iP-ndd" firstAttribute="top" secondItem="cfi-eY-0Xu" secondAttribute="bottom" id="EuR-a6-YMd"/>
+                    <constraint firstItem="Ub9-Pc-nfJ" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="20" id="HIx-7N-KnE"/>
+                    <constraint firstItem="hfW-6z-Sfh" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="20" id="I4R-Lr-b3G"/>
+                    <constraint firstItem="dB6-yM-BFa" firstAttribute="leading" secondItem="d6v-7C-9Vf" secondAttribute="trailing" constant="-8" id="XyI-f5-Avh"/>
+                    <constraint firstItem="cfi-eY-0Xu" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="20" id="bks-fC-Gg4"/>
+                    <constraint firstItem="cfi-eY-0Xu" firstAttribute="top" secondItem="Ub9-Pc-nfJ" secondAttribute="bottom" constant="16" id="iws-E5-Vfg"/>
+                    <constraint firstItem="dB6-yM-BFa" firstAttribute="centerY" secondItem="Ub9-Pc-nfJ" secondAttribute="centerY" id="kok-Dv-Ym2"/>
+                    <constraint firstItem="tCk-iP-ndd" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="20" id="p0C-UB-bEC"/>
+                    <constraint firstAttribute="trailing" secondItem="dB6-yM-BFa" secondAttribute="trailing" constant="20" id="ucd-ic-Hhq"/>
+                    <constraint firstItem="Ub9-Pc-nfJ" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="8" id="zdA-3b-SL7"/>
+                </constraints>
             </tableViewCellContentView>
             <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
-            <point key="canvasLocation" x="139" y="143"/>
+            <connections>
+                <outlet property="imgAddMember" destination="dB6-yM-BFa" id="v5w-Da-r1p"/>
+                <outlet property="imgProjectMember" destination="d6v-7C-9Vf" id="kdX-UM-FK7"/>
+                <outlet property="lblProjectCreateTime" destination="tCk-iP-ndd" id="ddM-1Z-M7X"/>
+                <outlet property="lblProjectFinishedEstimated" destination="hfW-6z-Sfh" id="140-5r-cbH"/>
+                <outlet property="lblProjectName" destination="Ub9-Pc-nfJ" id="hZ0-Hh-3r9"/>
+                <outlet property="lblProjectType" destination="cfi-eY-0Xu" id="ibK-im-UY1"/>
+            </connections>
+            <point key="canvasLocation" x="137.68115942028987" y="142.96875"/>
         </tableViewCell>
     </objects>
+    <resources>
+        <image name="light0" width="100" height="100"/>
+        <image name="plus.circle" catalog="system" width="128" height="121"/>
+    </resources>
 </document>

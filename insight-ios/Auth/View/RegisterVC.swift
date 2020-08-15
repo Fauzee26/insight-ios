@@ -61,8 +61,17 @@ class RegisterVC: UIViewController {
         
         if let fullname = fullNameField.text, let email = emailField.text, let password = passwordField.text {
             showProgress()
-            presenter?.registerUser(fullname: fullname, email: email, id: UUID().uuidString, password: password)
-            view.endEditing(true)
+            self.view.endEditing(true)
+            presenter?.isEmailAvailable(email: emailField!.text!, completion: { (isAvailable) in
+                if isAvailable {
+                    self.presenter?.registerUser(fullname: fullname, email: email, id: UUID().uuidString, password: password)
+                } else {
+                    DispatchQueue.main.async {
+                        self.alert(forTitle: "Warning!", andMessage: "email already used, try another one!")
+                    }
+                }
+            })
+
         }
     }
     

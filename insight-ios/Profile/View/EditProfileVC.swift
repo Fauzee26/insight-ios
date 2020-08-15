@@ -56,7 +56,7 @@ class EditProfileVC: UIViewController {
             imgProfile.image = UIImage(named: user.userAvatar)
             avatarChosen = user.userAvatar
             if user.userBgColor != "" {
-                imgProfile.backgroundColor = presenter.returnUIColor(components: user.userBgColor)
+                imgProfile.backgroundColor = returnUIColor(components: user.userBgColor)
             } else if user.userAvatar.contains("light") && user.userBgColor == "" {
                 imgProfile.backgroundColor = UIColor.lightGray
             }
@@ -82,7 +82,17 @@ class EditProfileVC: UIViewController {
         print(returnedRGBAString)
         
         if let name = fullNameField.text, let email = emailField.text {
-            presenter.updateProfile(email: email, fullname: name, bgColor: returnedRGBAString, avatarName: avatarChosen)
+            view.endEditing(true)
+            
+            presenter.isEmailAvailable(email: email) { (isAvailable) in
+                if isAvailable {
+                    self.presenter.updateProfile(email: email, fullname: name, bgColor: returnedRGBAString, avatarName: self.avatarChosen)
+                } else {
+                    DispatchQueue.main.async {
+                        self.alert(forTitle: "Warning!", andMessage: "email already used, try another one!")
+                    }
+                }
+            }
         }
     }
     

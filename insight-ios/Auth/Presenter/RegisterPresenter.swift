@@ -14,15 +14,15 @@ protocol RegisterDelegate {
     
     func registerSuccess(record: CKRecord)
     func registerFailed(error: Error)
+    
 }
 class RegisterPresenter {
     
     private let db = CKContainer.default().publicCloudDatabase
     private var delegate: RegisterDelegate
     
-    var records = [CKRecord]()
-    var insertedObjects = [CKUserModel]()
-    var deletedObjectIds = Set<CKRecord.ID>()
+    var container: CKContainer
+    let publicDB: CKDatabase
     
     var notificationQueue = OperationQueue.main
     
@@ -36,11 +36,45 @@ class RegisterPresenter {
     //
     init(delegate: RegisterDelegate) {
         self.delegate = delegate
+        
+        container = CKContainer.default()
+        publicDB = container.publicCloudDatabase
     }
     
     private func handle(error: Error) {
         self.notificationQueue.addOperation {
             self.delegate.onError(error)
+        }
+    }
+    
+    func isEmailAvailable(email: String, completion: @escaping (_ isAvailable: Bool) -> ()) {
+        let predicate = NSPredicate(value: true)
+        let query = CKQuery(recordType: "UserData", predicate: predicate)
+        
+        publicDB.perform(query, inZoneWith: CKRecordZone.default().zoneID) { (arrayResults, error) in
+            if let err = error {
+                self.delegate.registerFailed(error: err)
+                return
+            }
+            
+            guard let results = arrayResults else {return}
+            var recordCount = 0
+            
+            for record in results {
+                if recordCount <= 1 {
+                    let emailRecord = record[CKUserModel.emailKey] as? String
+                    if emailRecord == email {
+                        print("email is here")
+                        completion(false)
+                        recordCount += 1
+                    }
+                }
+            }
+            
+            if recordCount == 0 {
+                completion(true)
+            }
+            
         }
     }
     
@@ -71,6 +105,4 @@ class RegisterPresenter {
             }
         }
     }
-    
-    
 }

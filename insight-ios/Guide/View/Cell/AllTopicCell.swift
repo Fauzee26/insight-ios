@@ -7,15 +7,19 @@
 //
 
 import UIKit
+import SDWebImage
 
 class AllTopicCell: UITableViewCell {
-
+    
     @IBOutlet weak var imgView: UIImageView!
     @IBOutlet weak var labelName: UILabel!
     
-    func configureCell(img: UIImage, name: String) {
+    func configureCell(guide: Guide) {
         imgView.layer.cornerRadius = 10
-        imgView.image = img
-        labelName.text = name
+        
+        labelName.text = guide.title
+        
+        imgView.sd_imageIndicator = SDWebImageActivityIndicator.gray
+        imgView.sd_setImage(with: URL(string: guide.imgLink))
     }
 }

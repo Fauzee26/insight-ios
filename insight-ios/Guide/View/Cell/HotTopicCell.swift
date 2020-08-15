@@ -7,15 +7,19 @@
 //
 
 import UIKit
+import SDWebImage
 
 class HotTopicCell: UICollectionViewCell {
 
     @IBOutlet weak var imageVIew: UIImageView!
     @IBOutlet weak var label: UILabel!
     
-    func configureCell(image: UIImage, name: String) {
+    func configureCell(guide: Guide) {
         imageVIew.layer.cornerRadius = 15
-        imageVIew.image = image
-        label.text = name
+        
+        label.text = guide.title
+        
+        imageVIew.sd_imageIndicator = SDWebImageActivityIndicator.gray
+        imageVIew.sd_setImage(with: URL(string: guide.imgLink))
     }
 }

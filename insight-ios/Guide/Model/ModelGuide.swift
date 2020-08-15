@@ -14,3 +14,5 @@ struct Guide {
     let imgLink: String
     let supportedLink: String
 }
+
+let guideRecordType = "Guide"

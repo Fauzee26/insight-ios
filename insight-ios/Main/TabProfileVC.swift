@@ -48,7 +48,7 @@ class TabProfileVC: UIViewController {
     @objc func setupProfile() {
         let user = presenter.getProfile()
         imgProfile.image = UIImage(named: user.userAvatar)
-        imgProfile.backgroundColor = presenter.returnUIColor(components: user.userBgColor)
+        imgProfile.backgroundColor = returnUIColor(components: user.userBgColor)
         
         txtNameProfile.text = udService.userName
         txtEmailProfile.text = udService.userEmail
@@ -58,7 +58,11 @@ class TabProfileVC: UIViewController {
     }
     
     @objc func goToEditProfile(_ sender: UITapGestureRecognizer) {
+        if UserDefaultService.instance.isLoggedIn {
         performSegue(withIdentifier: "toEditProfile", sender: self)
+        } else {
+            alert(forTitle: "Warning!", andMessage: "Login ")
+        }
     }
    
     @IBAction func logoutPressed(_ sender: UIBarButtonItem) {

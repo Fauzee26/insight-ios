@@ -11,7 +11,7 @@
         <!--Learning Guide-->
         <scene sceneID="Ch9-yr-Cam">
             <objects>
-                <viewController id="3ON-LY-3vN" customClass="TabGuideVC" customModule="insight_ios" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="3ON-LY-3vN" customClass="TabGuideVC" customModule="Insight" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="u0C-jB-HyY">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -35,7 +35,7 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="HgF-hf-awo">
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="HgF-hf-awo">
                                 <rect key="frame" x="20" y="437" width="374" height="368"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                             </tableView>
@@ -129,7 +129,7 @@
         <!--Profile-->
         <scene sceneID="sqr-6V-rVr">
             <objects>
-                <viewController id="On3-vh-nhd" customClass="TabProfileVC" customModule="insight_ios" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="On3-vh-nhd" customClass="TabProfileVC" customModule="Insight" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="1Wj-tk-oaw">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -295,22 +295,27 @@
         <!--Projects-->
         <scene sceneID="z4d-ct-gP0">
             <objects>
-                <viewController storyboardIdentifier="ListProjectVC" id="cc2-ld-vHV" customClass="TabResearchVC" customModule="insight_ios" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="ListProjectVC" id="cc2-ld-vHV" customClass="TabResearchVC" customModule="Insight" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="fRK-lE-VMn">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="jUu-A3-9JT">
-                                <rect key="frame" x="20" y="140" width="374" height="665"/>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="135" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="jUu-A3-9JT">
+                                <rect key="frame" x="8" y="140" width="398" height="665"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                             </tableView>
+                            <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" style="large" translatesAutoresizingMaskIntoConstraints="NO" id="C7E-PQ-f6B">
+                                <rect key="frame" x="188.5" y="429.5" width="37" height="37"/>
+                            </activityIndicatorView>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <constraints>
-                            <constraint firstItem="jUu-A3-9JT" firstAttribute="leading" secondItem="dk2-8p-hs5" secondAttribute="leading" constant="20" id="CAh-Wu-1qg"/>
+                            <constraint firstItem="C7E-PQ-f6B" firstAttribute="centerY" secondItem="fRK-lE-VMn" secondAttribute="centerY" id="7GI-Dj-RtL"/>
+                            <constraint firstItem="jUu-A3-9JT" firstAttribute="leading" secondItem="dk2-8p-hs5" secondAttribute="leading" constant="8" id="CAh-Wu-1qg"/>
                             <constraint firstItem="jUu-A3-9JT" firstAttribute="top" secondItem="dk2-8p-hs5" secondAttribute="top" id="FfT-fN-O9h"/>
-                            <constraint firstItem="dk2-8p-hs5" firstAttribute="trailing" secondItem="jUu-A3-9JT" secondAttribute="trailing" constant="20" id="HJI-oo-aC5"/>
+                            <constraint firstItem="dk2-8p-hs5" firstAttribute="trailing" secondItem="jUu-A3-9JT" secondAttribute="trailing" constant="8" id="HJI-oo-aC5"/>
                             <constraint firstItem="dk2-8p-hs5" firstAttribute="bottom" secondItem="jUu-A3-9JT" secondAttribute="bottom" constant="8" id="gcg-8o-fIA"/>
+                            <constraint firstItem="C7E-PQ-f6B" firstAttribute="centerX" secondItem="fRK-lE-VMn" secondAttribute="centerX" id="nej-TN-fAA"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="dk2-8p-hs5"/>
                     </view>
@@ -319,26 +324,23 @@
                             <barButtonItem title="Item" image="plus" catalog="system" id="Lcl-sq-0pm">
                                 <connections>
                                     <action selector="addNewProjectPressed:" destination="cc2-ld-vHV" id="8Im-fl-CIP"/>
-                                    <segue destination="YDe-08-WVw" kind="show" id="JW7-e7-A9P"/>
                                 </connections>
                             </barButtonItem>
-                            <barButtonItem image="line.horizontal.3.decrease" catalog="system" id="KKl-iu-ape"/>
+                            <barButtonItem image="line.horizontal.3.decrease" catalog="system" id="KKl-iu-ape">
+                                <connections>
+                                    <action selector="btnSortPressed:" destination="cc2-ld-vHV" id="Cah-B2-b8f"/>
+                                </connections>
+                            </barButtonItem>
                         </rightBarButtonItems>
                     </navigationItem>
+                    <connections>
+                        <outlet property="activityIndicator" destination="C7E-PQ-f6B" id="khh-Pm-VhT"/>
+                        <outlet property="tableView" destination="jUu-A3-9JT" id="GDc-4o-E74"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="J2l-G3-HUU" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="2187" y="-297"/>
-        </scene>
-        <!--Research-->
-        <scene sceneID="aEN-hh-q7N">
-            <objects>
-                <viewControllerPlaceholder storyboardName="Research" id="YDe-08-WVw" sceneMemberID="viewController">
-                    <navigationItem key="navigationItem" id="mdp-gi-sqf"/>
-                </viewControllerPlaceholder>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="X6Y-fl-rVA" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="2750" y="-434"/>
         </scene>
         <!--Tab Bar Controller-->
         <scene sceneID="Cre-qj-nde">
