@@ -24,7 +24,7 @@ class TabGuideVC: UIViewController {
         collectionViewHotTopic.dataSource = self
         collectionViewHotTopic.register(UINib(nibName: "HotTopicCell", bundle: self.nibBundle), forCellWithReuseIdentifier: "hotTopicCell")
         
-        tableViewForum.setEmptyState(title: "Sorry :(", message: "This feature not available yet")
+        tableViewForum.setEmptyState(title: "Sorry :(", message: "This feature on development process 👷‍♂️")
         presenter?.getAllData()
     }
     

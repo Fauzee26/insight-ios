@@ -60,9 +60,8 @@ extension UITableView {
         label1.textAlignment = .center
         label1.numberOfLines = 0
         
-        let attrs1 = [NSAttributedString.Key.font : UIFont(name: label1.font.fontName, size: 20)]
-        let attrs2 = [NSAttributedString.Key.font : UIFont(name: label1.font.fontName, size: 16)]
-        
+        let attrs1 = [NSAttributedString.Key.font : UIFont.systemFont(ofSize: 20, weight: .medium)]
+        let attrs2 = [NSAttributedString.Key.font : UIFont.systemFont(ofSize: 16, weight: .regular)]
         let attributedString1 = NSMutableAttributedString(string:title, attributes:attrs1 as [NSAttributedString.Key : Any])
         let attributedString2 = NSMutableAttributedString(string:"\n\(message)", attributes:attrs2 as [NSAttributedString.Key : Any])
         
@@ -86,6 +85,36 @@ extension UITableView {
     }
 }
 
+extension UICollectionView {
+    func setEmptyState(title: String, message: String) {
+        let label1 = UILabel()
+        label1.textAlignment = .center
+        label1.numberOfLines = 0
+        
+        let attrs1 = [NSAttributedString.Key.font : UIFont.systemFont(ofSize: 20, weight: .medium)]
+        let attrs2 = [NSAttributedString.Key.font : UIFont.systemFont(ofSize: 16, weight: .regular)]
+        let attributedString1 = NSMutableAttributedString(string:title, attributes:attrs1 as [NSAttributedString.Key : Any])
+        let attributedString2 = NSMutableAttributedString(string:"\n\(message)", attributes:attrs2 as [NSAttributedString.Key : Any])
+        
+        attributedString1.append(attributedString2)
+        label1.attributedText = attributedString1
+        
+        let stackEmpty = UIStackView(frame: CGRect(x: self.bounds.size.width, y: self.bounds.size.height, width: self.bounds.size.width, height: 65.0))
+        stackEmpty.axis = .vertical
+        stackEmpty.alignment = .fill
+        stackEmpty.distribution = .fill
+        stackEmpty.spacing = 0.0
+        stackEmpty.backgroundColor = .cyan
+        
+        stackEmpty.addArrangedSubview(label1)
+        
+        self.backgroundView = stackEmpty
+    }
+    
+    func restore() {
+        self.backgroundView = nil
+    }
+}
 
 func returnUIColor(components: String) -> UIColor {
     let scanner = Scanner(string: components)

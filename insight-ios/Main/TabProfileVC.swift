@@ -16,6 +16,9 @@ class TabProfileVC: UIViewController {
     @IBOutlet weak var txtEmailProfile: UILabel!
     @IBOutlet weak var rightBar: UIBarButtonItem!
     
+    @IBOutlet weak var collectionRecentActivity: UICollectionView!
+    @IBOutlet weak var collectionForum: UICollectionView!
+    
     let udService = UserDefaultService.instance
     let presenter = ProfilePresenter()
     
@@ -27,6 +30,9 @@ class TabProfileVC: UIViewController {
         viewProfile.addGestureRecognizer(tap)
         
         NotificationCenter.default.addObserver(self, selector: #selector(setupProfile), name: NOTIF_USER_PROFILE_DID_CHANGE, object: nil)
+        
+        collectionRecentActivity.setEmptyState(title: "Data not available", message: "")
+        collectionForum.setEmptyState(title: "", message: "this feature still in development 👷‍♂️")
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -61,10 +67,10 @@ class TabProfileVC: UIViewController {
         if UserDefaultService.instance.isLoggedIn {
         performSegue(withIdentifier: "toEditProfile", sender: self)
         } else {
-            alert(forTitle: "Warning!", andMessage: "Login ")
+            alert(forTitle: "Warning!", andMessage: "you need to login to use this feature")
         }
     }
-   
+    
     @IBAction func logoutPressed(_ sender: UIBarButtonItem) {
         udService.isLoggedIn = false
         udService.userName = ""

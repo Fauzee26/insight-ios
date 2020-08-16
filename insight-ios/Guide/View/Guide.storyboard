@@ -93,7 +93,7 @@
                                             <constraint firstAttribute="height" constant="220" id="mhN-Vd-7xj"/>
                                         </constraints>
                                     </imageView>
-                                    <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="m0C-Qc-cBD">
+                                    <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" textAlignment="natural" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="m0C-Qc-cBD">
                                         <rect key="frame" x="20" y="366" width="374" height="467"/>
                                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                                         <string key="text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam ac leo nec diam iaculis consectetur. Donec nunc odio, dignissim ac semper id, euismod sodales libero. Ut rhoncus pellentesque viverra. Suspendisse mollis magna sit amet purus tincidunt, at maximus justo dignissim. 

@@ -26,12 +26,23 @@ class UserDefaultService {
     
     fileprivate let recordIdKey = "recordIdKey"
     
+    fileprivate let notShowAgainKey = "notShowAgainKey"
+    
     var hasLaunched: Bool {
         get {
             return def.bool(forKey: hasLaunchedKey)
         }
         set {
             def.set(newValue, forKey: hasLaunchedKey)
+        }
+    }
+    
+    var notShowAgain: Bool {
+        get {
+            return def.bool(forKey: notShowAgainKey)
+        }
+        set {
+            def.set(newValue, forKey: notShowAgainKey)
         }
     }
     

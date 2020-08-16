@@ -59,13 +59,6 @@ class LoginVC: UIViewController {
         view.endEditing(true)
     }
     
-    override func viewWillAppear(_ animated: Bool) {
-        super.viewWillAppear(animated)
-        if udService.isLoggedIn == true {
-            goToMain()
-        }
-    }
-    
     @objc func handleLoginWithAppleId() {
         let requests = ASAuthorizationAppleIDProvider().createRequest()
         requests.requestedScopes = [.email, .fullName]

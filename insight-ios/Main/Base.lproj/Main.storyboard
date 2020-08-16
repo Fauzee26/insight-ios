@@ -270,6 +270,8 @@
                         </barButtonItem>
                     </navigationItem>
                     <connections>
+                        <outlet property="collectionForum" destination="Oma-iN-5ak" id="tYn-XH-BoK"/>
+                        <outlet property="collectionRecentActivity" destination="iVP-Jb-DtQ" id="Sp3-MS-kxk"/>
                         <outlet property="imgProfile" destination="ill-mR-WBY" id="FL0-WK-7gb"/>
                         <outlet property="rightBar" destination="RM1-KO-PmH" id="egY-Xs-fte"/>
                         <outlet property="txtEmailProfile" destination="pQp-uh-aJe" id="vVf-yT-mL4"/>

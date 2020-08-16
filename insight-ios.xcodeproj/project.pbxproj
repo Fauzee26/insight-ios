@@ -21,6 +21,11 @@
 		5930698324DE54A10064DCFB /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5930698224DE54A10064DCFB /* User.swift */; };
 		5930698524DE60BB0064DCFB /* Constans.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5930698424DE60BB0064DCFB /* Constans.swift */; };
 		593CF6E324E8321E009C3633 /* ListProjectPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 593CF6E224E8321E009C3633 /* ListProjectPresenter.swift */; };
+		593CF6E524E8DBE7009C3633 /* DetailProjectVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 593CF6E424E8DBE7009C3633 /* DetailProjectVC.swift */; };
+		593CF6E724E8DC28009C3633 /* ProjectStep.swift in Sources */ = {isa = PBXBuildFile; fileRef = 593CF6E624E8DC28009C3633 /* ProjectStep.swift */; };
+		593CF6EC24E8DDB7009C3633 /* StepCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 593CF6EA24E8DDB7009C3633 /* StepCell.swift */; };
+		593CF6ED24E8DDB7009C3633 /* StepCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 593CF6EB24E8DDB7009C3633 /* StepCell.xib */; };
+		593CF6EF24E8E973009C3633 /* DetailStepVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 593CF6EE24E8E973009C3633 /* DetailStepVC.swift */; };
 		5959C0C024D07F33003963F3 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5959C0BF24D07F33003963F3 /* AppDelegate.swift */; };
 		5959C0C224D07F33003963F3 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5959C0C124D07F33003963F3 /* SceneDelegate.swift */; };
 		5959C0C724D07F34003963F3 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5959C0C524D07F34003963F3 /* Main.storyboard */; };
@@ -73,6 +78,11 @@
 		5930698224DE54A10064DCFB /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 		5930698424DE60BB0064DCFB /* Constans.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constans.swift; sourceTree = "<group>"; };
 		593CF6E224E8321E009C3633 /* ListProjectPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListProjectPresenter.swift; sourceTree = "<group>"; };
+		593CF6E424E8DBE7009C3633 /* DetailProjectVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailProjectVC.swift; sourceTree = "<group>"; };
+		593CF6E624E8DC28009C3633 /* ProjectStep.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProjectStep.swift; sourceTree = "<group>"; };
+		593CF6EA24E8DDB7009C3633 /* StepCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StepCell.swift; sourceTree = "<group>"; };
+		593CF6EB24E8DDB7009C3633 /* StepCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = StepCell.xib; sourceTree = "<group>"; };
+		593CF6EE24E8E973009C3633 /* DetailStepVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailStepVC.swift; sourceTree = "<group>"; };
 		5959C0BC24D07F33003963F3 /* Insight.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Insight.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		5959C0BF24D07F33003963F3 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		5959C0C124D07F33003963F3 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -256,6 +266,7 @@
 			isa = PBXGroup;
 			children = (
 				5901666D24E7CE6D0041D7EB /* CKResearchModel.swift */,
+				593CF6E624E8DC28009C3633 /* ProjectStep.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -266,6 +277,8 @@
 				5995C43924D7BFD400B5FCB5 /* Cell */,
 				5995C43324D6D87A00B5FCB5 /* Research.storyboard */,
 				5995C43A24D7BFEB00B5FCB5 /* AddProjectVC.swift */,
+				593CF6E424E8DBE7009C3633 /* DetailProjectVC.swift */,
+				593CF6EE24E8E973009C3633 /* DetailStepVC.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -358,6 +371,8 @@
 			children = (
 				5995C43524D6D8C800B5FCB5 /* ProjectCell.swift */,
 				5995C43624D6D8C800B5FCB5 /* ProjectCell.xib */,
+				593CF6EA24E8DDB7009C3633 /* StepCell.swift */,
+				593CF6EB24E8DDB7009C3633 /* StepCell.xib */,
 			);
 			path = Cell;
 			sourceTree = "<group>";
@@ -463,6 +478,7 @@
 				5995C46C24DA8E7600B5FCB5 /* Profile.storyboard in Resources */,
 				5995C43824D6D8C800B5FCB5 /* ProjectCell.xib in Resources */,
 				5995C48524DC0F7F00B5FCB5 /* Guide.storyboard in Resources */,
+				593CF6ED24E8DDB7009C3633 /* StepCell.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -520,10 +536,12 @@
 				5995C41D24D66E8800B5FCB5 /* LoginVC.swift in Sources */,
 				5989281C24E4C8CF00B1013C /* CKUserModel.swift in Sources */,
 				5995C42124D6733700B5FCB5 /* RoundedButton.swift in Sources */,
+				593CF6EF24E8E973009C3633 /* DetailStepVC.swift in Sources */,
 				5959C0CA24D07F34003963F3 /* insight_ios.xcdatamodeld in Sources */,
 				5901667024E7D1EA0041D7EB /* AddProjectPresenter.swift in Sources */,
 				5930698324DE54A10064DCFB /* User.swift in Sources */,
 				5930697924DD6B4D0064DCFB /* AvatarCell.swift in Sources */,
+				593CF6E724E8DC28009C3633 /* ProjectStep.swift in Sources */,
 				5995C43724D6D8C800B5FCB5 /* ProjectCell.swift in Sources */,
 				5995C47824DA9C0100B5FCB5 /* BorderView.swift in Sources */,
 				5901666A24E635CF0041D7EB /* ModelGuide.swift in Sources */,
@@ -538,11 +556,13 @@
 				5995C47424DA949900B5FCB5 /* Protocols.swift in Sources */,
 				5901666E24E7CE6D0041D7EB /* CKResearchModel.swift in Sources */,
 				5930697D24DE50430064DCFB /* UserDefaultService.swift in Sources */,
+				593CF6EC24E8DDB7009C3633 /* StepCell.swift in Sources */,
 				5995C48824DC142D00B5FCB5 /* AllTopicCell.swift in Sources */,
 				593CF6E324E8321E009C3633 /* ListProjectPresenter.swift in Sources */,
 				5930697F24DE52FF0064DCFB /* ProfilePresenter.swift in Sources */,
 				5995C47024DA928B00B5FCB5 /* TabGuideVC.swift in Sources */,
 				5930698124DE539D0064DCFB /* Enums.swift in Sources */,
+				593CF6E524E8DBE7009C3633 /* DetailProjectVC.swift in Sources */,
 				5959C0C224D07F33003963F3 /* SceneDelegate.swift in Sources */,
 				5901666624E4D1C60041D7EB /* LoginPresenter.swift in Sources */,
 				5989281A24E4C77C00B1013C /* RegisterPresenter.swift in Sources */,

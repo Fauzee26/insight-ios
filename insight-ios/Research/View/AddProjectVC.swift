@@ -35,7 +35,7 @@ class AddProjectVC: UIViewController {
         
         setupTextField()
         pickerDueDate.datePickerMode = .date
-        
+        pickerDueDate.minimumDate = Date()
         let tap = UITapGestureRecognizer(target: self, action: #selector(hideKeyboard))
         view.addGestureRecognizer(tap)
         

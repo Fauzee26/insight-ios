@@ -25,21 +25,18 @@ class TabResearchVC: UIViewController {
         tableView.delegate = self
         tableView.dataSource = self
         tableView.register(UINib(nibName: "ProjectCell", bundle: self.nibBundle), forCellReuseIdentifier: "projectCell")
-    
+        
+        let refreshControl = UIRefreshControl()
+        refreshControl.addTarget(self, action: #selector(refreshData), for: .valueChanged)
+        tableView.refreshControl = refreshControl
     }
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
-        
-        //        let udService = UserDefaultService.instance
-        //        if udService.isLoggedIn == false {
-        //            let storyboard = UIStoryboard(name: "Auth", bundle: nil)
-        //            let navAuth = storyboard.instantiateInitialViewController() as! UINavigationController
-        //            let loginVC = navAuth.topViewController as! LoginVC
-        //            let nav = UINavigationController(rootViewController: loginVC)
-        //            present(nav, animated: true, completion: nil)
-        //        }
-        
+        refreshData()
+    }
+    
+    @objc func refreshData() {
         if UserDefaultService.instance.isLoggedIn {
             presenter?.getAllData()
             activityIndicator.startAnimating()
@@ -64,7 +61,11 @@ class TabResearchVC: UIViewController {
     }
     
     @IBAction func btnSortPressed(_ sender: UIBarButtonItem) {
-        alert(forTitle: "Sorry", andMessage: "this feature not available yet")
+        if udService.isLoggedIn {
+            alert(forTitle: "Sorry", andMessage: "this feature not available yet")
+        } else {
+            alert(forTitle: "Warning", andMessage: "you need to login to use this feature")
+        }
     }
 }
 
@@ -82,26 +83,35 @@ extension TabResearchVC: UITableViewDelegate, UITableViewDataSource {
         let tap = UITapGestureRecognizer(target: self, action: #selector(imgAlert(sender:)))
         cell.imgAddMember.addGestureRecognizer(tap)
         
-
-        
         return cell
     }
     
     @objc func imgAlert(sender: UITapGestureRecognizer) {
         alert(forTitle: "Hello", andMessage: "This feature not availabel yet :(")
     }
+    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        let storyboard = UIStoryboard(name: "Research", bundle: nil)
+        let detailProjectVC = storyboard.instantiateViewController(identifier: "DetailProjectVC") as! DetailProjectVC
+        
+        let project = arrayProjects[indexPath.row]
+        detailProjectVC.project = project
+        
+        self.navigationController?.pushViewController(detailProjectVC, animated: true)
+    }
 }
 
 extension TabResearchVC: ListProjectDelegate {
     func dataProjectSuccess(projects: [CKResearchModel]) {
         DispatchQueue.main.async {
+            self.tableView.refreshControl?.endRefreshing()
             self.activityIndicator.stopAnimating()
             self.activityIndicator.isHidden = true
             
             self.arrayProjects = projects
             print(self.arrayProjects.count)
             self.tableView.reloadData()
-
+            
             if self.arrayProjects.count == 0 {
                 self.tableView.setEmptyState(title: "No Project(s) yet", message: "Add new one to be shown here")
             } else {
@@ -111,6 +121,7 @@ extension TabResearchVC: ListProjectDelegate {
     }
     
     func dataProjectFail(error: Error) {
+        tableView.refreshControl?.endRefreshing()
         activityIndicator.stopAnimating()
         activityIndicator.isHidden = true
         
