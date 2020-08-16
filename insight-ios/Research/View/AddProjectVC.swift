@@ -17,7 +17,7 @@ class AddProjectVC: UIViewController {
     @IBOutlet weak var btnCreate: UIButton!
     
     var isDueDate = true
-
+    
     var datePicked = Date()
     let dateFormatter = DateFormatter()
     var strDate: Date?
@@ -95,9 +95,9 @@ class AddProjectVC: UIViewController {
 extension AddProjectVC: AddProjectDelegate {
     func addProjectSuccess() {
         DispatchQueue.main.async {
-            self.dismiss(animated: true) {
-                self.delegate?.refresh()
-            }
+            self.navigationController?.popToRootViewController(animated: true)
+            
+            self.delegate?.refresh()
         }
     }
     

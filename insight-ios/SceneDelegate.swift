@@ -18,22 +18,22 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         // This delegate does not imply the connecting scene or session are new (see `application:configurationForConnectingSceneSession` instead).
         guard let _ = (scene as? UIWindowScene) else { return }
         
-//        let udService = UserDefaultService.instance
-//        
-//        let isLoggedIn = udService.isLoggedIn
-//        let auth = UIStoryboard(name: "Auth", bundle: nil)
-//        let main = UIStoryboard(name: "Main", bundle: nil)
-//        
-//        var vc = UIViewController()
-//        
-//        if isLoggedIn {
-//            vc = main.instantiateInitialViewController() as! UITabBarController
-//        } else {
-//            vc = auth.instantiateInitialViewController() as! UINavigationController
-//        }
-//        
-//        self.window?.rootViewController = vc
-//        self.window?.makeKeyAndVisible()
+        let service = UserDefaultService.instance
+        
+        let hasLaunched = service.hasLaunched
+        let mainStoryboard = UIStoryboard(name: "Auth", bundle: nil)
+        let onboardingStoryboard = UIStoryboard(name: "Onboarding", bundle: nil)
+        
+        var vc = UIViewController()
+        
+        if hasLaunched {
+            vc = mainStoryboard.instantiateInitialViewController() as! UINavigationController
+        } else {
+            vc = onboardingStoryboard.instantiateInitialViewController() as! UIViewController
+        }
+        
+        self.window?.rootViewController = vc
+        self.window?.makeKeyAndVisible()
     }
     
     func sceneDidDisconnect(_ scene: UIScene) {

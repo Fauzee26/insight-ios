@@ -26,6 +26,8 @@
 		593CF6EC24E8DDB7009C3633 /* StepCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 593CF6EA24E8DDB7009C3633 /* StepCell.swift */; };
 		593CF6ED24E8DDB7009C3633 /* StepCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 593CF6EB24E8DDB7009C3633 /* StepCell.xib */; };
 		593CF6EF24E8E973009C3633 /* DetailStepVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 593CF6EE24E8E973009C3633 /* DetailStepVC.swift */; };
+		593CF6F224E91ADE009C3633 /* Onboarding.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 593CF6F124E91ADE009C3633 /* Onboarding.storyboard */; };
+		593CF6F424E91AE9009C3633 /* OnboardingVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 593CF6F324E91AE9009C3633 /* OnboardingVC.swift */; };
 		5959C0C024D07F33003963F3 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5959C0BF24D07F33003963F3 /* AppDelegate.swift */; };
 		5959C0C224D07F33003963F3 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5959C0C124D07F33003963F3 /* SceneDelegate.swift */; };
 		5959C0C724D07F34003963F3 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5959C0C524D07F34003963F3 /* Main.storyboard */; };
@@ -83,6 +85,8 @@
 		593CF6EA24E8DDB7009C3633 /* StepCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StepCell.swift; sourceTree = "<group>"; };
 		593CF6EB24E8DDB7009C3633 /* StepCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = StepCell.xib; sourceTree = "<group>"; };
 		593CF6EE24E8E973009C3633 /* DetailStepVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailStepVC.swift; sourceTree = "<group>"; };
+		593CF6F124E91ADE009C3633 /* Onboarding.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Onboarding.storyboard; sourceTree = "<group>"; };
+		593CF6F324E91AE9009C3633 /* OnboardingVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingVC.swift; sourceTree = "<group>"; };
 		5959C0BC24D07F33003963F3 /* Insight.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Insight.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		5959C0BF24D07F33003963F3 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		5959C0C124D07F33003963F3 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -153,6 +157,15 @@
 			path = Cell;
 			sourceTree = "<group>";
 		};
+		593CF6F024E91AB9009C3633 /* Onboarding */ = {
+			isa = PBXGroup;
+			children = (
+				593CF6F124E91ADE009C3633 /* Onboarding.storyboard */,
+				593CF6F324E91AE9009C3633 /* OnboardingVC.swift */,
+			);
+			path = Onboarding;
+			sourceTree = "<group>";
+		};
 		5959C0B324D07F33003963F3 = {
 			isa = PBXGroup;
 			children = (
@@ -183,6 +196,7 @@
 				5995C42524D67B6100B5FCB5 /* Research */,
 				5995C42924D67BA500B5FCB5 /* Guide */,
 				5995C42D24D67BC700B5FCB5 /* Profile */,
+				593CF6F024E91AB9009C3633 /* Onboarding */,
 				5959C0CB24D07F37003963F3 /* Assets.xcassets */,
 				5959C0CD24D07F37003963F3 /* LaunchScreen.storyboard */,
 				5959C0D024D07F37003963F3 /* Info.plist */,
@@ -471,6 +485,7 @@
 				5995C41B24D66E7600B5FCB5 /* Auth.storyboard in Resources */,
 				5995C48924DC142D00B5FCB5 /* AllTopicCell.xib in Resources */,
 				5959C0CF24D07F37003963F3 /* LaunchScreen.storyboard in Resources */,
+				593CF6F224E91ADE009C3633 /* Onboarding.storyboard in Resources */,
 				5995C43424D6D87A00B5FCB5 /* Research.storyboard in Resources */,
 				5995C47F24DB9E4200B5FCB5 /* HotTopicCell.xib in Resources */,
 				5959C0CC24D07F37003963F3 /* Assets.xcassets in Resources */,
@@ -571,6 +586,7 @@
 				5901666824E5498F0041D7EB /* Util.swift in Sources */,
 				5930698524DE60BB0064DCFB /* Constans.swift in Sources */,
 				5995C46E24DA8E8300B5FCB5 /* EditProfileVC.swift in Sources */,
+				593CF6F424E91AE9009C3633 /* OnboardingVC.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

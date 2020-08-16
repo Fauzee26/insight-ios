@@ -42,6 +42,12 @@ class LoginVC: UIViewController {
         stackAppleId.addArrangedSubview(btnAppleId)
     }
     
+    override func viewDidAppear(_ animated: Bool) {
+        if udService.isLoggedIn {
+            goToMain()
+        }
+    }
+    
     func setupTextField() {
         let toolbar = UIToolbar(frame: CGRect(origin: .zero, size: .init(width: view.frame.size.width, height: 30)))
         

@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="16097.2" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="ExT-v1-zT2">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16087"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--OnboardingVC-->
+        <scene sceneID="1eG-ek-xlh">
+            <objects>
+                <viewController id="ExT-v1-zT2" customClass="OnboardingVC" customModule="Insight" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="fB2-MO-iEr" customClass="GradientView" customModule="Insight" customModuleProvider="target">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <pageControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" numberOfPages="3" translatesAutoresizingMaskIntoConstraints="NO" id="dhr-5Q-H73">
+                                <rect key="frame" x="187.5" y="717" width="39" height="37"/>
+                                <connections>
+                                    <action selector="pagesChanged:" destination="ExT-v1-zT2" eventType="valueChanged" id="luc-xJ-xWi"/>
+                                </connections>
+                            </pageControl>
+                            <button opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ri4-3W-nu5">
+                                <rect key="frame" x="20" y="762" width="374" height="50"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="50" id="W2H-6y-m93"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="18"/>
+                                <state key="normal" title="GET STARTED">
+                                    <color key="titleColor" systemColor="labelColor" cocoaTouchSystemColor="darkTextColor"/>
+                                </state>
+                                <connections>
+                                    <action selector="btnGetStartedPressed:" destination="ExT-v1-zT2" eventType="touchUpInside" id="WI2-Lx-CSs"/>
+                                </connections>
+                            </button>
+                            <button hidden="YES" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="mhZ-tP-QeB">
+                                <rect key="frame" x="120.5" y="832" width="173" height="30"/>
+                                <state key="normal" title="Have an account? Sign In">
+                                    <color key="titleColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                            </button>
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="2eB-bB-NZF">
+                                <rect key="frame" x="0.0" y="44" width="414" height="665"/>
+                                <viewLayoutGuide key="contentLayoutGuide" id="lmU-uO-v31"/>
+                                <viewLayoutGuide key="frameLayoutGuide" id="GE0-Ik-bsU"/>
+                            </scrollView>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="mhZ-tP-QeB" firstAttribute="centerX" secondItem="fB2-MO-iEr" secondAttribute="centerX" id="068-Jx-6lr"/>
+                            <constraint firstItem="Ri4-3W-nu5" firstAttribute="top" secondItem="dhr-5Q-H73" secondAttribute="bottom" constant="8" id="2qZ-g8-66I"/>
+                            <constraint firstItem="dhr-5Q-H73" firstAttribute="top" secondItem="2eB-bB-NZF" secondAttribute="bottom" id="JBx-JN-0BD"/>
+                            <constraint firstItem="2eB-bB-NZF" firstAttribute="top" secondItem="Qoy-MI-DVx" secondAttribute="top" id="K9j-wL-fEV"/>
+                            <constraint firstItem="Qoy-MI-DVx" firstAttribute="trailing" secondItem="Ri4-3W-nu5" secondAttribute="trailing" constant="20" id="KBY-4h-bDe"/>
+                            <constraint firstItem="mhZ-tP-QeB" firstAttribute="top" secondItem="Ri4-3W-nu5" secondAttribute="bottom" constant="20" id="PoJ-PG-ThH"/>
+                            <constraint firstItem="mhZ-tP-QeB" firstAttribute="bottom" secondItem="Qoy-MI-DVx" secondAttribute="bottom" id="TWJ-wr-G0Y"/>
+                            <constraint firstItem="2eB-bB-NZF" firstAttribute="trailing" secondItem="Qoy-MI-DVx" secondAttribute="trailing" id="WxJ-g9-gnG"/>
+                            <constraint firstItem="Ri4-3W-nu5" firstAttribute="leading" secondItem="Qoy-MI-DVx" secondAttribute="leading" constant="20" id="gVD-YC-pFi"/>
+                            <constraint firstItem="2eB-bB-NZF" firstAttribute="leading" secondItem="Qoy-MI-DVx" secondAttribute="leading" id="iel-vk-B93"/>
+                            <constraint firstItem="dhr-5Q-H73" firstAttribute="centerX" secondItem="fB2-MO-iEr" secondAttribute="centerX" id="xEF-0B-N8c"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="Qoy-MI-DVx"/>
+                    </view>
+                    <connections>
+                        <outlet property="btnGetStarted" destination="Ri4-3W-nu5" id="vRD-2f-bPj"/>
+                        <outlet property="pageControl" destination="dhr-5Q-H73" id="gIq-af-V7K"/>
+                        <outlet property="scrollView" destination="2eB-bB-NZF" id="uGC-Kg-2W0"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="V1O-Ic-vyr" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="311.59420289855075" y="-232.36607142857142"/>
+        </scene>
+    </scenes>
+</document>
