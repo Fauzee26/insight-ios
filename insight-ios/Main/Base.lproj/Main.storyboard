@@ -23,20 +23,20 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="GgS-XS-oUP">
-                                <rect key="frame" x="20" y="378" width="374" height="1"/>
+                                <rect key="frame" x="20" y="408" width="374" height="1"/>
                                 <color key="backgroundColor" systemColor="separatorColor" red="0.23529411759999999" green="0.23529411759999999" blue="0.26274509800000001" alpha="0.28999999999999998" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="1" id="OYU-o8-siZ"/>
                                 </constraints>
                             </view>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Forum Question" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6dM-mA-JZ8">
-                                <rect key="frame" x="20" y="399" width="146" height="26"/>
+                                <rect key="frame" x="20" y="429" width="146" height="26"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="21"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="HgF-hf-awo">
-                                <rect key="frame" x="20" y="437" width="374" height="368"/>
+                                <rect key="frame" x="20" y="467" width="374" height="338"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                             </tableView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Kon-0A-7nC">
@@ -54,7 +54,7 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3Jb-O7-Kyq">
-                                <rect key="frame" x="347" y="405" width="47" height="20"/>
+                                <rect key="frame" x="347" y="435" width="47" height="20"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="20" id="hFC-v6-5Ti"/>
                                 </constraints>
@@ -66,10 +66,10 @@
                                 </connections>
                             </button>
                             <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="8HN-yG-eLd">
-                                <rect key="frame" x="20" y="186" width="374" height="180"/>
+                                <rect key="frame" x="20" y="186" width="374" height="210"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="180" id="dbv-b7-geq"/>
+                                    <constraint firstAttribute="height" constant="210" id="dbv-b7-geq"/>
                                 </constraints>
                                 <collectionViewFlowLayout key="collectionViewLayout" scrollDirection="horizontal" automaticEstimatedItemSize="YES" minimumLineSpacing="10" minimumInteritemSpacing="10" id="UtG-Ts-o48">
                                     <size key="itemSize" width="128" height="128"/>
@@ -337,6 +337,7 @@
                     </navigationItem>
                     <connections>
                         <outlet property="activityIndicator" destination="C7E-PQ-f6B" id="khh-Pm-VhT"/>
+                        <outlet property="btnSort" destination="KKl-iu-ape" id="SLu-OC-eBe"/>
                         <outlet property="tableView" destination="jUu-A3-9JT" id="GDc-4o-E74"/>
                     </connections>
                 </viewController>

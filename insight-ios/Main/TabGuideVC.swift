@@ -25,6 +25,10 @@ class TabGuideVC: UIViewController {
         collectionViewHotTopic.register(UINib(nibName: "HotTopicCell", bundle: self.nibBundle), forCellWithReuseIdentifier: "hotTopicCell")
         
         tableViewForum.setEmptyState(title: "Sorry :(", message: "This feature on development process 👷‍♂️")
+    }
+
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(animated)
         presenter?.getAllData()
     }
     

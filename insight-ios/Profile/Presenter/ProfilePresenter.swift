@@ -94,18 +94,17 @@ class ProfilePresenter {
         record.setValue(bgColor, forKey: CKUserModel.bgColorKey)
         record.setValue(avatarName, forKey: CKUserModel.avatarKey)
         
+        print(record.recordID)
         let db = CKContainer.default().publicCloudDatabase
-        db.save(record) { (record, error) in
-            
+        db.save(record) { (resRecord, error) in
             if let err = error {
-                print("cmonnnnn: ", err)
+                print("errUpdatingData: ", err)
                 self.delegate.updateFailed(error: err)
             } else {
                 do {
-                    let data = try NSKeyedArchiver.archivedData(withRootObject: record!, requiringSecureCoding: true)
-                    
+                    let data = try NSKeyedArchiver.archivedData(withRootObject: resRecord!, requiringSecureCoding: true)
+
                     self.udService.recordId = data
-                    
                     self.setProfile(name: fullname, email: email, bgColor: bgColor, avatarName: avatarName)
                     self.delegate.updateSuccessfull()
                 }  catch let error {

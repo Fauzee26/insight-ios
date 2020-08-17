@@ -16,6 +16,7 @@ class TabResearchVC: UIViewController {
     var arrayProjects = [CKResearchModel]()
     let udService = UserDefaultService.instance
     var presenter: ListProjectPresenter?
+    @IBOutlet weak var btnSort: UIBarButtonItem!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -29,6 +30,14 @@ class TabResearchVC: UIViewController {
         let refreshControl = UIRefreshControl()
         refreshControl.addTarget(self, action: #selector(refreshData), for: .valueChanged)
         tableView.refreshControl = refreshControl
+        
+        if !udService.isLoggedIn {
+            btnSort.isEnabled = false
+            btnSort.tintColor = UIColor.clear
+        }
+            
+        refreshData()
+        NotificationCenter.default.addObserver(self, selector: #selector(refreshData), name: NOTIF_NEW_RESEARCH_DATA_ADDED, object: nil)
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -38,11 +47,14 @@ class TabResearchVC: UIViewController {
     
     @objc func refreshData() {
         if UserDefaultService.instance.isLoggedIn {
-            presenter?.getAllData()
-            activityIndicator.startAnimating()
-            activityIndicator.isHidden = false
+//            Timer.scheduledTimer(withTimeInterval: 0.5, repeats: false) { (_) in
+                self.presenter?.getAllData()
+                self.activityIndicator.startAnimating()
+                self.activityIndicator.isHidden = false
+//            }
         } else {
             tableView.reloadData()
+            tableView.refreshControl?.endRefreshing()
             activityIndicator.stopAnimating()
             activityIndicator.isHidden = true
             tableView.setEmptyState(title: "", message: "Please Login to see your project(s)")
@@ -53,7 +65,6 @@ class TabResearchVC: UIViewController {
         if udService.isLoggedIn {
             let storyboard = UIStoryboard(name: "Research", bundle: nil)
             let addResearchVC = storyboard.instantiateInitialViewController() as! AddProjectVC
-            addResearchVC.delegate = self
             self.navigationController?.pushViewController(addResearchVC, animated: true)
         } else {
             alert(forTitle: "Warning", andMessage: "you need to login first to add new project")
@@ -108,6 +119,7 @@ extension TabResearchVC: ListProjectDelegate {
             self.activityIndicator.stopAnimating()
             self.activityIndicator.isHidden = true
             
+            self.arrayProjects.removeAll()
             self.arrayProjects = projects
             print(self.arrayProjects.count)
             self.tableView.reloadData()
@@ -126,11 +138,5 @@ extension TabResearchVC: ListProjectDelegate {
         activityIndicator.isHidden = true
         
         alert(forTitle: "Error", andMessage: error.localizedDescription)
-    }
-}
-
-extension TabResearchVC: ProjectAddedDelegate {
-    func refresh() {
-        presenter?.getAllData()
     }
 }

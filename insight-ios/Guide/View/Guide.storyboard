@@ -3,6 +3,7 @@
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16087"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -94,7 +95,7 @@
                                         </constraints>
                                     </imageView>
                                     <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" textAlignment="natural" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="m0C-Qc-cBD">
-                                        <rect key="frame" x="20" y="366" width="374" height="467"/>
+                                        <rect key="frame" x="20" y="366" width="374" height="425"/>
                                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                                         <string key="text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam ac leo nec diam iaculis consectetur. Donec nunc odio, dignissim ac semper id, euismod sodales libero. Ut rhoncus pellentesque viverra. Suspendisse mollis magna sit amet purus tincidunt, at maximus justo dignissim. 
 
@@ -103,9 +104,35 @@ Quisque et blandit ligula, a imperdiet justo. In molestie congue nisl, non porta
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                         <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                                     </textView>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Nfg-Ql-cTf">
+                                        <rect key="frame" x="0.0" y="799" width="414" height="50"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Learn More" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="i5E-Od-dim">
+                                                <rect key="frame" x="20" y="15" width="87" height="20.5"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="chevron.right" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="THK-gZ-eil">
+                                                <rect key="frame" x="389.5" y="17" width="12.5" height="16.5"/>
+                                                <color key="tintColor" systemColor="labelColor" cocoaTouchSystemColor="darkTextColor"/>
+                                            </imageView>
+                                        </subviews>
+                                        <color key="backgroundColor" name="grey-dynamic"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="50" id="4pj-uO-dWF"/>
+                                            <constraint firstAttribute="trailing" secondItem="THK-gZ-eil" secondAttribute="trailing" constant="12" id="JYM-qh-GQ4"/>
+                                            <constraint firstItem="i5E-Od-dim" firstAttribute="leading" secondItem="Nfg-Ql-cTf" secondAttribute="leading" constant="20" id="MLc-e7-WAW"/>
+                                            <constraint firstItem="THK-gZ-eil" firstAttribute="centerY" secondItem="i5E-Od-dim" secondAttribute="centerY" id="PeQ-a3-GAJ"/>
+                                            <constraint firstItem="i5E-Od-dim" firstAttribute="centerY" secondItem="Nfg-Ql-cTf" secondAttribute="centerY" id="yRS-lH-TiJ"/>
+                                        </constraints>
+                                    </view>
                                 </subviews>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                                 <constraints>
+                                    <constraint firstAttribute="bottom" secondItem="Nfg-Ql-cTf" secondAttribute="bottom" constant="4" id="6lv-5b-3xj"/>
+                                    <constraint firstItem="Nfg-Ql-cTf" firstAttribute="leading" secondItem="M27-yQ-NFP" secondAttribute="leading" id="97T-dg-tb2"/>
+                                    <constraint firstAttribute="trailing" secondItem="Nfg-Ql-cTf" secondAttribute="trailing" id="Eog-zh-xpd"/>
                                     <constraint firstItem="7KG-E2-FPC" firstAttribute="top" secondItem="M27-yQ-NFP" secondAttribute="top" constant="20" id="FuD-UI-VIz"/>
                                     <constraint firstItem="4Kd-ra-FQC" firstAttribute="top" secondItem="7KG-E2-FPC" secondAttribute="bottom" constant="20" id="Gg4-GI-Irk"/>
                                     <constraint firstAttribute="trailing" secondItem="4Kd-ra-FQC" secondAttribute="trailing" constant="20" id="LIE-hc-tHQ"/>
@@ -115,7 +142,7 @@ Quisque et blandit ligula, a imperdiet justo. In molestie congue nisl, non porta
                                     <constraint firstAttribute="trailing" secondItem="7KG-E2-FPC" secondAttribute="trailing" constant="20" id="cEF-41-mSb"/>
                                     <constraint firstItem="m0C-Qc-cBD" firstAttribute="leading" secondItem="M27-yQ-NFP" secondAttribute="leading" constant="20" id="lBd-EM-g8w"/>
                                     <constraint firstItem="7KG-E2-FPC" firstAttribute="leading" secondItem="M27-yQ-NFP" secondAttribute="leading" constant="30" id="mPF-gR-Jp9"/>
-                                    <constraint firstAttribute="bottom" secondItem="m0C-Qc-cBD" secondAttribute="bottom" constant="20" id="q07-mX-dHH"/>
+                                    <constraint firstItem="Nfg-Ql-cTf" firstAttribute="top" secondItem="m0C-Qc-cBD" secondAttribute="bottom" constant="8" id="tHr-yT-thO"/>
                                 </constraints>
                                 <userDefinedRuntimeAttributes>
                                     <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
@@ -146,6 +173,7 @@ Quisque et blandit ligula, a imperdiet justo. In molestie congue nisl, non porta
                         <outlet property="imgTopic" destination="4Kd-ra-FQC" id="paF-i5-Psl"/>
                         <outlet property="lblDescTopic" destination="m0C-Qc-cBD" id="r9g-l2-jsh"/>
                         <outlet property="lblTitleTopic" destination="7KG-E2-FPC" id="Phz-hs-3x1"/>
+                        <outlet property="viewLearnMore" destination="Nfg-Ql-cTf" id="pZE-sH-bZo"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="QBA-DR-ddb" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -154,6 +182,10 @@ Quisque et blandit ligula, a imperdiet justo. In molestie congue nisl, non porta
         </scene>
     </scenes>
     <resources>
+        <image name="chevron.right" catalog="system" width="96" height="128"/>
         <image name="dummy" width="5472" height="3648"/>
+        <namedColor name="grey-dynamic">
+            <color red="0.85100001096725464" green="0.875" blue="0.87099999189376831" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
     </resources>
 </document>

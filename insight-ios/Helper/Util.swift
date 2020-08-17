@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import SafariServices
 
 extension UIViewController {
     private struct activityAlert {
@@ -31,6 +32,12 @@ extension UIViewController {
         let alertAction = UIAlertAction(title: "OK", style: .default, handler: nil)
         alertController.addAction(alertAction)
         self.present(alertController, animated: true)
+    }
+    
+    func presentSFSafariVC(for url: String) {
+        let urlFromString = URL(string: url)
+        let safariVC = SFSafariViewController(url: urlFromString!)
+        present(safariVC, animated: true, completion: nil)
     }
 }
 

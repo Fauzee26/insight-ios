@@ -11,3 +11,4 @@ import Foundation
 //MARK: - Notifications Constans
 let NOTIF_USER_AVATAR_DID_CHANGE = Notification.Name("notifUserAvatarChanged")
 let NOTIF_USER_PROFILE_DID_CHANGE = Notification.Name("notifUserProfileChanged")
+let NOTIF_NEW_RESEARCH_DATA_ADDED = Notification.Name("NotifNewResearchDataAdded")

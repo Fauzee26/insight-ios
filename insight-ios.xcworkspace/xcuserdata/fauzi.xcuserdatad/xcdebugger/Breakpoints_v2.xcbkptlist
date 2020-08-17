@@ -164,5 +164,113 @@
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "4489E7B9-BED4-4C26-8B2D-C3B0B2DD19F8"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "insight-ios/Research/View/AddProjectVC.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "14"
+            endingLineNumber = "14"
+            landmarkName = "AddProjectVC"
+            landmarkType = "3">
+            <Locations>
+               <Location
+                  uuid = "4489E7B9-BED4-4C26-8B2D-C3B0B2DD19F8 - 21f1b8e5a3824277"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "Insight.AddProjectVC.projectNameField.getter : Swift.Optional&lt;__C.UITextField&gt;"
+                  moduleName = "Insight"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/fauzi/Documents/academy/mini-challenge-3/insight-ios/insight-ios/Research/View/AddProjectVC.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "14"
+                  endingLineNumber = "14"
+                  offsetFromSymbolStart = "128">
+               </Location>
+               <Location
+                  uuid = "4489E7B9-BED4-4C26-8B2D-C3B0B2DD19F8 - 71ef8e51a643764b"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "Insight.AddProjectVC.projectNameField.setter : Swift.Optional&lt;__C.UITextField&gt;"
+                  moduleName = "Insight"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/fauzi/Documents/academy/mini-challenge-3/insight-ios/insight-ios/Research/View/AddProjectVC.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "14"
+                  endingLineNumber = "14"
+                  offsetFromSymbolStart = "200">
+               </Location>
+               <Location
+                  uuid = "4489E7B9-BED4-4C26-8B2D-C3B0B2DD19F8 - 655aedde02096d78"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "Insight.AddProjectVC.projectNameField.modify : Swift.Optional&lt;__C.UITextField&gt;"
+                  moduleName = "Insight"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/fauzi/Documents/academy/mini-challenge-3/insight-ios/insight-ios/Research/View/AddProjectVC.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "0"
+                  endingLineNumber = "0"
+                  offsetFromSymbolStart = "64">
+               </Location>
+               <Location
+                  uuid = "4489E7B9-BED4-4C26-8B2D-C3B0B2DD19F8 - b8884768c8b5cd90"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "Insight.AddProjectVC.projectNameField.modify : Swift.Optional&lt;__C.UITextField&gt; with unmangled suffix &quot;.resume.0&quot;"
+                  moduleName = "Insight"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/fauzi/Documents/academy/mini-challenge-3/insight-ios/insight-ios/Research/View/AddProjectVC.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "14"
+                  endingLineNumber = "14"
+                  offsetFromSymbolStart = "76">
+               </Location>
+               <Location
+                  uuid = "4489E7B9-BED4-4C26-8B2D-C3B0B2DD19F8 - 6e5b0b9afc1fe739"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "Insight.AddProjectVC.init(nibName: Swift.Optional&lt;Swift.String&gt;, bundle: Swift.Optional&lt;__C.NSBundle&gt;) -&gt; Insight.AddProjectVC"
+                  moduleName = "Insight"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/fauzi/Documents/academy/mini-challenge-3/insight-ios/insight-ios/Research/View/AddProjectVC.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "14"
+                  endingLineNumber = "14"
+                  offsetFromSymbolStart = "432">
+               </Location>
+               <Location
+                  uuid = "4489E7B9-BED4-4C26-8B2D-C3B0B2DD19F8 - 21c2389b8fcf69e2"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "Insight.AddProjectVC.init(coder: __C.NSCoder) -&gt; Swift.Optional&lt;Insight.AddProjectVC&gt;"
+                  moduleName = "Insight"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/fauzi/Documents/academy/mini-challenge-3/insight-ios/insight-ios/Research/View/AddProjectVC.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "14"
+                  endingLineNumber = "14"
+                  offsetFromSymbolStart = "400">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
    </Breakpoints>
 </Bucket>

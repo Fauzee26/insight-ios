@@ -22,9 +22,7 @@ class AddProjectVC: UIViewController {
     let dateFormatter = DateFormatter()
     var strDate: Date?
     var presenter: AddProjectPresenter?
-    
-    var delegate: ProjectAddedDelegate?
-    
+        
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -97,15 +95,11 @@ extension AddProjectVC: AddProjectDelegate {
         DispatchQueue.main.async {
             self.navigationController?.popToRootViewController(animated: true)
             
-            self.delegate?.refresh()
+            NotificationCenter.default.post(name: NOTIF_NEW_RESEARCH_DATA_ADDED, object: nil)
         }
     }
     
     func addProjectFailed(error: Error) {
         alert(forTitle: "Error", andMessage: error.localizedDescription)
     }
-}
-
-protocol ProjectAddedDelegate {
-    func refresh()
 }

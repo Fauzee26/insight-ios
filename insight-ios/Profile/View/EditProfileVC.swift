@@ -18,6 +18,7 @@ class EditProfileVC: UIViewController {
     
     private var presenter = ProfilePresenter()
     private var user = User()
+    private let udService = UserDefaultService.instance
     
     var bgColor: UIColor?
     var strBgColor: String?
@@ -79,20 +80,24 @@ class EditProfileVC: UIViewController {
         
         let getBGColorRGBA = imgProfile.backgroundColor?.rgba
         let returnedRGBAString = "[\(getBGColorRGBA!.red), \(getBGColorRGBA!.green), \(getBGColorRGBA!.blue), \(getBGColorRGBA!.alpha)]"
-        print(returnedRGBAString)
         
         if let name = fullNameField.text, let email = emailField.text {
             view.endEditing(true)
             
-            presenter.isEmailAvailable(email: email) { (isAvailable) in
-                if isAvailable {
-                    self.presenter.updateProfile(email: email, fullname: name, bgColor: returnedRGBAString, avatarName: self.avatarChosen)
-                } else {
-                    DispatchQueue.main.async {
-                        self.alert(forTitle: "Warning!", andMessage: "email already used, try another one!")
+            if udService.userEmail != email {
+                presenter.isEmailAvailable(email: email) { (isAvailable) in
+                    if isAvailable {
+                        self.presenter.updateProfile(email: email, fullname: name, bgColor: returnedRGBAString, avatarName: self.avatarChosen)
+                    } else {
+                        DispatchQueue.main.async {
+                            self.alert(forTitle: "Warning!", andMessage: "email already used, try another one!")
+                        }
                     }
                 }
+            } else {
+                self.presenter.updateProfile(email: email, fullname: name, bgColor: returnedRGBAString, avatarName: self.avatarChosen)
             }
+            
         }
     }
     

@@ -14,6 +14,7 @@ class DetailTopicVC: UIViewController {
     @IBOutlet weak var imgTopic: UIImageView!
     @IBOutlet weak var lblDescTopic: UITextView!
     
+    @IBOutlet weak var viewLearnMore: UIView!
     var guide: Guide?
     
     override func viewDidLoad() {
@@ -35,6 +36,15 @@ class DetailTopicVC: UIViewController {
             image = UIImage(data: data!)
             self.imgTopic.image = image
             
+        }
+        
+        let tap = UITapGestureRecognizer(target: self, action: #selector(goToSafari(_:)))
+        viewLearnMore.addGestureRecognizer(tap)
+    }
+    
+    @objc func goToSafari(_ sender: UITapGestureRecognizer) {
+        if let link = guide?.supportedLink {
+            self.presentSFSafariVC(for: link)
         }
     }
 }
